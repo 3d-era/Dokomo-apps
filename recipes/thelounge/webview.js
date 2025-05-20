@@ -30,6 +30,13 @@ function countsOfUnreadMessagesAfterMarker(unreadMarker) {
   return [unread, unreadHighlighted];
 }
 
+function isBadgeInMutedChannel(badgeElement) {
+  const channelListItem = badgeElement.closest('.channel-list-item');
+  return (
+    channelListItem === null || channelListItem.classList.contains('is-muted')
+  );
+}
+
 module.exports = Dokomo => {
   let unreadMessagesAtLastActivity = 0;
   let unreadHighlightedMessagesAtLastActivity = 0;
@@ -45,6 +52,12 @@ module.exports = Dokomo => {
     const directElements = document.querySelectorAll('.badge.highlight');
 
     for (const directElement of directElements) {
+      // Note: muted channels don't have highlighted badges for direct notifications,
+      // but muted networks do
+      if (isBadgeInMutedChannel(directElement)) {
+        continue;
+      }
+
       if (directElement.textContent.length > 0) {
         direct += Dokomo.safeParseInt(directElement.textContent);
       }
@@ -54,12 +67,22 @@ module.exports = Dokomo => {
     const indirectElements = document.querySelectorAll(
       '.badge:not(.highlight)',
     );
+
     for (const indirectElement of indirectElements) {
+      if (isBadgeInMutedChannel(indirectElement)) {
+        continue;
+      }
+
       if (indirectElement.textContent.length > 0) {
         indirect += 1;
       }
     }
 
+    // Only want to count unread messages if the active channel is unmuted
+    if (
+      document.querySelectorAll('.channel-list-item.active:not(.is-muted)')
+        .length > 0
+    ) {
     const unreadMarkers = document.querySelectorAll('div.unread-marker');
 
     if (unreadMarkers.length > 0) {
@@ -77,7 +100,8 @@ module.exports = Dokomo => {
           unreadHighlighted > 0 &&
           unreadHighlighted > unreadHighlightedMessagesAtLastActivity
         ) {
-          direct += unreadHighlighted - unreadHighlightedMessagesAtLastActivity;
+            direct +=
+              unreadHighlighted - unreadHighlightedMessagesAtLastActivity;
         } else {
           indirect += 1;
         }
@@ -85,6 +109,7 @@ module.exports = Dokomo => {
     } else {
       unreadMessagesAtLastActivity = 0;
       unreadHighlightedMessagesAtLastActivity = 0;
+    }
     }
 
     Dokomo.setBadge(direct, indirect);

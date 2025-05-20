@@ -6,9 +6,7 @@ const _path = _interopRequireDefault(require('path'));
 
 module.exports = Dokomo => {
   const getMessages = () => {
-    const totalMessages = document.querySelector(
-      '#app_0 > div.app_counter',
-    ).innerHTML;
+    const totalMessages = document.querySelectorAll('.message_row').length;
     Dokomo.setBadge(totalMessages);
   };
 

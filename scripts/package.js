@@ -89,6 +89,7 @@ const compress = (src, dest) =>
       );
         unsuccessful += 1;
     }
+    }
     if (unsuccessful > 0) {
       continue;
     }

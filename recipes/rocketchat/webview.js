@@ -6,19 +6,19 @@ const _path = _interopRequireDefault(require('path'));
 
 module.exports = Dokomo => {
   const getMessages = () => {
-    const directMessages = document.querySelectorAll('.rcx-badge');
+    const title = document.querySelector('title');
+    const matches = title.textContent.match(/^\((\S*?)\)/);
 
-    let directMessagesCount = 0;
-
-    for (const directMessage of directMessages) {
-      directMessagesCount += Dokomo.safeParseInt(directMessage.textContent);
+    if (matches) {
+      const count = Dokomo.safeParseInt(matches[1], 10);
+      if (count) {
+        Dokomo.setBadge(count);
+      } else {
+        Dokomo.setBadge(0, 1);
+      }
+    } else {
+      Dokomo.setBadge(0);
     }
-
-    const indirectMessagesCount = Math.round(
-      document.querySelectorAll('.rcx-sidebar-item--highlighted').length,
-    );
-
-    Dokomo.setBadge(directMessagesCount, indirectMessagesCount);
   };
 
   Dokomo.loop(getMessages);

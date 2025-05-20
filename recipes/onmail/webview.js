@@ -12,7 +12,9 @@ module.exports = Dokomo => {
       if (label.textContent) {
         const inboxCount = label.nextSibling;
         countImportant =
-          inboxCount === null ? 0 : Dokomo.safeParseInt(inboxCount.textContent);
+          inboxCount === null
+            ? 0
+            : Dokomo.safeParseInt(inboxCount.textContent);
 
         break;
       }

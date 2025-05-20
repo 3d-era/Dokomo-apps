@@ -1,12 +1,13 @@
-// wait for Dokomo and Zoho Mail to initialize
-if (
-  Object.prototype.hasOwnProperty.call(window, 'dokomo') &&
-  Object.prototype.hasOwnProperty.call(window.dokomo, 'setBadge') &&
-  Object.prototype.hasOwnProperty.call(window, 'zmNCenter') &&
-  Object.prototype.hasOwnProperty.call(window, 'zmfolAction')
-) {
-  const unreadNotifications = window.zmNCenter.counter.count(); // General Notifications by Zoho (Bell Icon)
-  const unreadMail = window.zmfolAction.getUnreadViewCount(); // Unread messages count
-
-  window.dokomo.setBadge(unreadMail, unreadNotifications);
+// Wait for Dokomo to initialize
+if (window.dokomo?.setBadge !== undefined) {
+  window.dokomo.setBadge(
+    window.dokomo.safeParseInt(window.zmfolAction?.getUnreadViewCount()) +
+      window.dokomo.safeParseInt(
+        document.querySelector('#wms_menu_unreadchats_cnt')?.textContent,
+      ),
+    window.dokomo.safeParseInt(
+      window.zmTopBar?.topBandElements()?.notification?.children
+        ?.notificationBadge?.textContent,
+    ),
+  );
 }

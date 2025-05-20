@@ -14,7 +14,9 @@ module.exports = (Dokomo, settings) => {
       );
       for (const child of allScreenReaders) {
         if (child.previousSibling) {
-          unreadCount += Dokomo.safeParseInt(child.previousSibling.textContent);
+          unreadCount += Dokomo.safeParseInt(
+            child.previousSibling.textContent,
+          );
         }
       }
     }
@@ -35,7 +37,7 @@ module.exports = (Dokomo, settings) => {
       directUnreadCount =
         settings.onlyShowFavoritesInUnreadCount === true
           ? collectCounts('div[role=tree]:nth-child(2)')
-          : collectCounts('div[role=tree]:nth-child(3)');
+          : collectCounts('div[role=tree]:nth-child(1)');
 
       indirectUnreadCount = collectCounts('div[role=tree]:nth-child(4)'); // groups
     }

@@ -12,9 +12,11 @@ setInterval(() => {
 
 module.exports = Dokomo => {
   const getMessages = () => {
-    const element = document.querySelector('a[href^="/direct/inbox"]');
+    const element = document.querySelector('a[href^="/direct/inbox"] span');
     Dokomo.setBadge(
-      element.textContent ? Dokomo.safeParseInt(element.textContent) : 0,
+      element && element.textContent
+        ? Dokomo.safeParseInt(element.textContent)
+        : 0,
     );
   };
 

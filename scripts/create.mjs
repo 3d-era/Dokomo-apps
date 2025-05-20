@@ -46,7 +46,7 @@ const pascalCasedName = toPascalCase(recipe); // PascalCased recipe ID only cont
   process.env.APPDATA || (
     // Check if this script runs on Windows
     process.platform === 'win32'
-      ? `${process.env.USERPROFILE}\\AppData\\Roaming\\Ferdium\\recipes\\dev`
+      ? `${process.env.USERPROFILE}\\AppData\\Roaming\\Dokomo\\recipes\\dev`
     // If not, check for Darwin
     : process.platform === 'darwin'
       ? `${process.env.HOME}/Library/Application Support`
