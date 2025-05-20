@@ -1,4 +1,5 @@
 [
+  "discord",
   "messenger",
   "facebook",
   "zalo",
@@ -14,5 +15,6 @@
   "google-translate",
   "binance",
   "tiktok",
-  "shopee"
+  "shopee",
+  "wechat"
 ]

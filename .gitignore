@@ -9,9 +9,10 @@ server*.log
 *.jpg
 *.jpeg
 *.bmp
+*.zwc*
 /all.json
 
-docs/
+/temp
 
 CODE_OF_CONDUCT.md
 
