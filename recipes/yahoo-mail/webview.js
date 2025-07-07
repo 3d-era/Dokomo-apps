@@ -8,7 +8,7 @@ module.exports = Dokomo => {
   const getMessages = () => {
     const count = Dokomo.safeParseInt(
       document.querySelector(
-      'a[data-test-folder-name="Inbox"] span[data-test-id="displayed-count"]',
+        'a[data-test-folder-name="Inbox"] span[data-test-id="displayed-count"]',
       )?.textContent,
     );
     Dokomo.setBadge(count);

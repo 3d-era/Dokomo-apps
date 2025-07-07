@@ -83,33 +83,33 @@ module.exports = Dokomo => {
       document.querySelectorAll('.channel-list-item.active:not(.is-muted)')
         .length > 0
     ) {
-    const unreadMarkers = document.querySelectorAll('div.unread-marker');
+      const unreadMarkers = document.querySelectorAll('div.unread-marker');
 
-    if (unreadMarkers.length > 0) {
-      const counts = countsOfUnreadMessagesAfterMarker(unreadMarkers[0]);
-      const unread = counts[0];
-      const unreadHighlighted = counts[1];
+      if (unreadMarkers.length > 0) {
+        const counts = countsOfUnreadMessagesAfterMarker(unreadMarkers[0]);
+        const unread = counts[0];
+        const unreadHighlighted = counts[1];
 
-      if (document.hasFocus()) {
-        unreadMessagesAtLastActivity = unread;
-        unreadHighlightedMessagesAtLastActivity = unreadHighlighted;
-      }
+        if (document.hasFocus()) {
+          unreadMessagesAtLastActivity = unread;
+          unreadHighlightedMessagesAtLastActivity = unreadHighlighted;
+        }
 
-      if (unread > unreadMessagesAtLastActivity) {
-        if (
-          unreadHighlighted > 0 &&
-          unreadHighlighted > unreadHighlightedMessagesAtLastActivity
-        ) {
+        if (unread > unreadMessagesAtLastActivity) {
+          if (
+            unreadHighlighted > 0 &&
+            unreadHighlighted > unreadHighlightedMessagesAtLastActivity
+          ) {
             direct +=
               unreadHighlighted - unreadHighlightedMessagesAtLastActivity;
-        } else {
-          indirect += 1;
+          } else {
+            indirect += 1;
+          }
         }
+      } else {
+        unreadMessagesAtLastActivity = 0;
+        unreadHighlightedMessagesAtLastActivity = 0;
       }
-    } else {
-      unreadMessagesAtLastActivity = 0;
-      unreadHighlightedMessagesAtLastActivity = 0;
-    }
     }
 
     Dokomo.setBadge(direct, indirect);

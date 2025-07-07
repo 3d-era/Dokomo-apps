@@ -84,11 +84,11 @@ const compress = (src, dest) =>
     for (const file of mandatoryFiles) {
       const filePath = path.join(recipeSrc, file);
       if (!fs.existsSync(filePath)) {
-      console.log(
+        console.log(
           `⚠️ Couldn't package "${recipe}": Folder doesn't contain a "${file}".`,
-      );
+        );
         unsuccessful += 1;
-    }
+      }
     }
     if (unsuccessful > 0) {
       continue;
@@ -97,15 +97,15 @@ const compress = (src, dest) =>
     // Check icons sizes
     const svgIcon = path.join(recipeSrc, 'icon.svg');
     if (fs.existsSync(svgIcon)) {
-    const svgSize = sizeOf(svgIcon);
-    const svgHasRightSize = svgSize.width === svgSize.height;
-    if (!svgHasRightSize) {
-      console.log(
-        `⚠️ Couldn't package "${recipe}": Recipe SVG icon isn't a square`,
-      );
+      const svgSize = sizeOf(svgIcon);
+      const svgHasRightSize = svgSize.width === svgSize.height;
+      if (!svgHasRightSize) {
+        console.log(
+          `⚠️ Couldn't package "${recipe}": Recipe SVG icon isn't a square`,
+        );
         unsuccessful += 1;
-      continue;
-    }
+        continue;
+      }
     }
 
     // Check that user.js does not exist
@@ -257,7 +257,7 @@ const compress = (src, dest) =>
         ) {
           const pkgJsonRelative = path.normalize(
             path.relative(repoRoot, packageJson),
-            );
+          );
           if (result.files.some(({ file }) => file === pkgJsonRelative)) {
             git.diff(pkgJsonRelative, (_diffErr, diffResult) => {
               if (diffResult && !pkgVersionChangedMatcher.test(diffResult)) {

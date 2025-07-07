@@ -14,9 +14,7 @@ module.exports = (Dokomo, settings) => {
       );
       for (const child of allScreenReaders) {
         if (child.previousSibling) {
-          unreadCount += Dokomo.safeParseInt(
-            child.previousSibling.textContent,
-          );
+          unreadCount += Dokomo.safeParseInt(child.previousSibling.textContent);
         }
       }
     }

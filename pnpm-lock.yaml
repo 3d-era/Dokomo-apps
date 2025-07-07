@@ -45,6 +45,8 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
 
+  recipes/1password: {}
+
   recipes/BlueBubbles: {}
 
   recipes/NewsBlur: {}
@@ -58,6 +60,8 @@ importers:
   recipes/airmessage: {}
 
   recipes/airtable: {}
+
+  recipes/alibaba-chat: {}
 
   recipes/amazon-web-services: {}
 
@@ -73,6 +77,8 @@ importers:
 
   recipes/azure-devops: {}
 
+  recipes/azure-portal: {}
+
   recipes/basecamp: {}
 
   recipes/bigbluebutton: {}
@@ -85,6 +91,10 @@ importers:
 
   recipes/bitwarden: {}
 
+  recipes/blinkist: {}
+
+  recipes/bluesky: {}
+
   recipes/box: {}
 
   recipes/brax.me: {}
@@ -94,6 +104,8 @@ importers:
   recipes/bugzilla: {}
 
   recipes/campuswire: {}
+
+  recipes/canva: {}
 
   recipes/canvas: {}
 
@@ -115,6 +127,8 @@ importers:
 
   recipes/citrix-workspace: {}
 
+  recipes/claude-ai: {}
+
   recipes/clickup: {}
 
   recipes/cliq: {}
@@ -132,6 +146,8 @@ importers:
   recipes/crowdin: {}
 
   recipes/deepl: {}
+
+  recipes/deepseek: {}
 
   recipes/dev-community: {}
 
@@ -151,7 +167,11 @@ importers:
 
   recipes/dockerhub: {}
 
+  recipes/drawio: {}
+
   recipes/dropbox: {}
+
+  recipes/duckduckgo-ai-chat: {}
 
   recipes/easy-redmine: {}
 
@@ -167,7 +187,11 @@ importers:
 
   recipes/facebook: {}
 
+  recipes/facebook-meta: {}
+
   recipes/facebookpages: {}
+
+  recipes/fandom: {}
 
   recipes/fastmail: {}
 
@@ -177,7 +201,13 @@ importers:
 
   recipes/figma: {}
 
+  recipes/firefly: {}
+
+  recipes/fiverr: {}
+
   recipes/fleep: {}
+
+  recipes/flipboard: {}
 
   recipes/flock: {}
 
@@ -213,15 +243,31 @@ importers:
 
   recipes/good-reads: {}
 
+  recipes/google-calendar: {}
+
+  recipes/google-classroom: {}
+
   recipes/google-contacts: {}
 
   recipes/google-docs: {}
 
+  recipes/google-drive: {}
+
   recipes/google-duo: {}
+
+  recipes/google-gemini: {}
 
   recipes/google-groups: {}
 
+  recipes/google-keep: {}
+
+  recipes/google-maps: {}
+
+  recipes/google-meet: {}
+
   recipes/google-news: {}
+
+  recipes/google-podcasts: {}
 
   recipes/google-presentation: {}
 
@@ -231,18 +277,6 @@ importers:
 
   recipes/google-voice: {}
 
-  recipes/googlecalendar: {}
-
-  recipes/googleclassroom: {}
-
-  recipes/googledrive: {}
-
-  recipes/googlekeep: {}
-
-  recipes/googlemeet: {}
-
-  recipes/googlepodcasts: {}
-
   recipes/gotify: {}
 
   recipes/goto: {}
@@ -250,8 +284,6 @@ importers:
   recipes/gotomeeting: {}
 
   recipes/grammarly: {}
-
-  recipes/grape: {}
 
   recipes/groupme: {}
 
@@ -271,8 +303,6 @@ importers:
 
   recipes/hey: {}
 
-  recipes/hipchat: {}
-
   recipes/home-assistant: {}
 
   recipes/hostnet: {}
@@ -282,6 +312,8 @@ importers:
   recipes/iCloud: {}
 
   recipes/iberbox: {}
+
+  recipes/icloud-mail: {}
 
   recipes/icloud-reminders: {}
 
@@ -375,6 +407,8 @@ importers:
 
   recipes/nextcloud-cospend: {}
 
+  recipes/nextcloud-deck: {}
+
   recipes/nextcloud-news: {}
 
   recipes/nextcloud-talk: {}
@@ -397,6 +431,8 @@ importers:
 
   recipes/office365-owa: {}
 
+  recipes/onedrive: {}
+
   recipes/onenote: {}
 
   recipes/onmail: {}
@@ -405,7 +441,17 @@ importers:
 
   recipes/outreach: {}
 
+  recipes/pastebin: {}
+
+  recipes/patreon: {}
+
   recipes/paymo: {}
+
+  recipes/penpot: {}
+
+  recipes/peopleperhour: {}
+
+  recipes/perplexity: {}
 
   recipes/pinterest: {}
 
@@ -431,21 +477,27 @@ importers:
 
   recipes/podio: {}
 
+  recipes/poe: {}
+
   recipes/pomodoro-tracker: {}
+
+  recipes/portainer: {}
 
   recipes/posteo: {}
 
   recipes/producthunt: {}
 
+  recipes/proton-calendar: {}
+
+  recipes/proton-drive: {}
+
   recipes/proton-mail: {}
 
-  recipes/protoncalendar: {}
-
-  recipes/protondrive: {}
+  recipes/proton-pass: {}
 
   recipes/protonet: {}
 
-  recipes/pulsesms: {}
+  recipes/pulse-sms: {}
 
   recipes/pushbullet: {}
 
@@ -457,9 +509,11 @@ importers:
 
   recipes/reddit: {}
 
-  recipes/redditchat: {}
+  recipes/reddit-chat: {}
 
-  recipes/ringcentral: {}
+  recipes/regex101: {}
+
+  recipes/ring-central: {}
 
   recipes/riseup: {}
 
@@ -468,6 +522,8 @@ importers:
   recipes/rocketchat: {}
 
   recipes/roundcube: {}
+
+  recipes/schildichat: {}
 
   recipes/scribens: {}
 
@@ -482,6 +538,8 @@ importers:
   recipes/simplelogin: {}
 
   recipes/simplenote: {}
+
+  recipes/skiff-mail: {}
 
   recipes/skype: {}
 
@@ -515,6 +573,8 @@ importers:
 
   recipes/sync: {}
 
+  recipes/taiga: {}
+
   recipes/tawk: {}
 
   recipes/tchap: {}
@@ -528,6 +588,8 @@ importers:
   recipes/telegram: {}
 
   recipes/thelounge: {}
+
+  recipes/threads: {}
 
   recipes/threema: {}
 
@@ -565,6 +627,8 @@ importers:
 
   recipes/udemy: {}
 
+  recipes/unraid: {}
+
   recipes/vk: {}
 
   recipes/voxer: {}
@@ -583,6 +647,8 @@ importers:
 
   recipes/whimsical: {}
 
+  recipes/wikipedia: {}
+
   recipes/wire: {}
 
   recipes/withspectrum: {}
@@ -599,8 +665,6 @@ importers:
 
   recipes/yahoo-mail: {}
 
-  recipes/yammer: {}
-
   recipes/yandex-mail: {}
 
   recipes/youtrack: {}
@@ -611,6 +675,8 @@ importers:
 
   recipes/zalo: {}
 
+  recipes/zalo-oa: {}
+
   recipes/zammad: {}
 
   recipes/zendesk: {}
@@ -620,16 +686,6 @@ importers:
   recipes/zeplin: {}
 
   recipes/zimbra: {}
-
-  recipes/zoho: {}
-
-  recipes/zoho-projects: {}
-
-  recipes/zoom: {}
-
-  recipes/zulip: {}
-
-  scripts/sample_recipe: {}
 
   recipes/zoho: {}
 
@@ -1611,19 +1667,6 @@ snapshots:
 
   '@eslint/eslintrc@2.1.4':
     dependencies:
-      eslint: 8.48.0
-      eslint-visitor-keys: 3.4.3
-    dev: true
-
-  /@eslint-community/regexpp@4.6.1:
-    resolution: {integrity: sha512-O7x6dMstWLn2ktjcoiNLDkAGG2EjveHL+Vvc+n0fXumkJYAcSqcVYKtwDU+hDZ0uDUsnUagSYaZrOLAYE8un1A==}
-    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
-    dev: true
-
-  /@eslint/eslintrc@2.1.2:
-    resolution: {integrity: sha512-+wvgpDsrB1YqAMdEUCcnTlpfVBH7Vqn6A/NT3D8WVXFIaKMlErPIZT3oCIAVCOtarRpMtelZLqJeU3t7WY6X6g==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
       ajv: 6.12.6
       debug: 4.4.1
       espree: 9.6.1
@@ -2225,7 +2268,6 @@ snapshots:
 
   optionator@0.9.4:
     dependencies:
-      '@aashutoshrathi/word-wrap': 1.2.6
       deep-is: 0.1.4
       fast-levenshtein: 2.0.6
       levn: 0.4.1

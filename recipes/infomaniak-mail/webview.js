@@ -10,9 +10,7 @@ module.exports = Dokomo => {
     const inboxField = document.querySelector('.ws-tree-node-content');
     const inboxCountField = inboxField.querySelector('.ws-tree-node-badge');
     const inboxCountText = inboxCountField ? inboxCountField.textContent : null;
-    const inboxCount = inboxCountText
-      ? Dokomo.safeParseInt(inboxCountText)
-      : 0;
+    const inboxCount = inboxCountText ? Dokomo.safeParseInt(inboxCountText) : 0;
 
     let unimportantCount = 0;
 
