@@ -6,9 +6,11 @@ const _path = _interopRequireDefault(require('path'));
 
 module.exports = Dokomo => {
   const getMessages = () => {
-    const count = document.querySelector(
-      'a[data-test-folder-name="Inbox"] span[data-test-id="displayed-count"]',
-    ).textContent;
+    const count = Dokomo.safeParseInt(
+      document.querySelector(
+        'a[data-test-folder-name="Inbox"] span[data-test-id="displayed-count"]',
+      )?.textContent,
+    );
     Dokomo.setBadge(count);
   };
 

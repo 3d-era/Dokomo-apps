@@ -8,16 +8,15 @@ module.exports = (Dokomo, settings) => {
   const getMessages = () => {
     let directCount = 0;
     const directCountPerServer = document.querySelectorAll(
-      '[class*="lowerBadge-"] [class*="numberBadge-"]',
+      '[class*="lowerBadge_"] [class*="numberBadge_"]',
     );
 
     for (const directCountBadge of directCountPerServer) {
       directCount += Dokomo.safeParseInt(directCountBadge.textContent);
     }
 
-    const indirectCountPerServer = document.querySelectorAll(
-      '[class*="modeUnread-"]',
-    ).length;
+    const indirectCountPerServer =
+      document.title.search('• Discord') === -1 ? 0 : 1;
 
     Dokomo.setBadge(directCount, indirectCountPerServer);
   };
@@ -52,7 +51,11 @@ module.exports = (Dokomo, settings) => {
           event.preventDefault();
           event.stopPropagation();
 
-          if (settings.trapLinkClicks === true) {
+          if (
+            // Always open file downloads in Dokomo, rather than the external browser
+            url.includes('discordapp.com/attachments/') ||
+            settings.trapLinkClicks === true
+          ) {
             window.location.href = url;
           } else {
             Dokomo.openNewWindow(url);

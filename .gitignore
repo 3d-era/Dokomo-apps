@@ -9,14 +9,11 @@ server*.log
 *.jpg
 *.jpeg
 *.bmp
+*.zwc*
 /all.json
-
-docs/
-
+/temp
+/docs
 CODE_OF_CONDUCT.md
-
 *.md
-
 .github/
-
 _Unused/

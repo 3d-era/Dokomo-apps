@@ -6,38 +6,46 @@ const _path = _interopRequireDefault(require('path'));
 
 module.exports = Dokomo => {
   const getMessages = () => {
-    let direct = 0;
-
-    const notificationWrapper = document.querySelector(
-      '.notifications .notification-wrapper',
-    );
-
-    if (notificationWrapper) {
-      const directSelector = notificationWrapper.querySelectorAll(
-        '.notification[object_type="chat"], .notification[object_type="room"]',
-      );
-      direct = directSelector ? Dokomo.safeParseInt(directSelector.length) : 0;
-    }
-
+    // With `// Legacy ` are marked those selectors that were working for some
+    // Nextcloud version before 27 (24 or 25).
+    const counterBubble = '.counter-bubble__counter';
+    const directFromLeftSideBar = document.querySelectorAll(
+      `${counterBubble}--highlighted`, // Nextcloud 27
+    ).length;
     let indirect = 0;
-
     for (const counter of document.querySelectorAll(
-      '.app-navigation-entry__counter',
+      '.app-navigation-entry__counter, ' + // Legacy
+        `${counterBubble}:not(${counterBubble}--highlighted)`, // Nextcloud 27
     )) {
-      const entryCounter = counter
-        ? Dokomo.safeParseInt(counter.textContent)
-        : 0;
-      indirect += entryCounter;
+      indirect += Dokomo.safeParseInt(counter?.textContent.trim());
     }
 
     if (document.title.startsWith('*')) {
       indirect += 1;
     }
 
-    Dokomo.setBadge(direct, indirect);
+    Dokomo.setBadge(
+      // Try to use the unread conversations count retrieved from the left
+      // sidebar, otherwise check Talk specific notifications
+      directFromLeftSideBar > 0
+        ? directFromLeftSideBar
+        : Dokomo.safeParseInt(
+            document
+              .querySelector(
+                '.notifications .notification-wrapper, ' + // Legacy
+                  '.notification-container .notification-wrapper', // Nextcloud 27
+              )
+              ?.querySelectorAll(
+                '.notification[object_type="chat"], ' + // Legacy
+                  '.notification[object_type="room"], ' + // Legacy
+                  '.notification[data-object-type="chat"], ' + // Nextcloud 27
+                  '.notification[data-object-type="room"]', // Nextcloud 27
+              ).length,
+          ),
+      indirect,
+    );
   };
 
   Dokomo.loop(getMessages);
-
   Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

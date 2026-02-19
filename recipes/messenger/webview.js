@@ -14,7 +14,7 @@ function hideInstallMessage() {
   }
 }
 
-module.exports = Dokomo => {
+module.exports = (Dokomo, settings) => {
   const getMessages = () => {
     let count = 0;
     let newMessengerUI = false;
@@ -101,4 +101,29 @@ module.exports = Dokomo => {
       return notification;
     });
   }
+
+  document.addEventListener(
+    'click',
+    event => {
+      const link = event.target.closest('a[href^="http"]');
+      const button = event.target.closest('button[title^="http"]');
+
+      if (link || button) {
+        const url = link
+          ? link.getAttribute('href')
+          : button.getAttribute('title');
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (url.includes('fbsbx.com') || settings.trapLinkClicks === true) {
+          // 'fbsbx.com is Facebook file hosting service. Always open file downloads in Dokomo.
+          window.location.href = url;
+        } else {
+          Dokomo.openNewWindow(url);
+        }
+      }
+    },
+    true,
+  );
 };

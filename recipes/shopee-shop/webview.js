@@ -9,7 +9,7 @@ module.exports = Dokomo => {
     const notificationBadge = document.querySelector(
       '.shopee-badge-x__sup--num',
     ).innerHTML;
-    console.log(`Kal ${notificationBadge}`);
+
     Dokomo.setBadge(notificationBadge);
   };
 

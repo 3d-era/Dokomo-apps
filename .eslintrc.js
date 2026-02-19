@@ -26,7 +26,7 @@ module.exports = {
     ],
     'no-param-reassign': 1,
     'prefer-destructuring': 0,
-    //  eslint-plugin-unicorn
+    // eslint-plugin-unicorn
     'unicorn/filename-case': 0,
     'unicorn/no-null': 0,
     'unicorn/no-useless-undefined': 0,

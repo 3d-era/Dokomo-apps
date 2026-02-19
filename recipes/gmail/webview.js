@@ -18,6 +18,10 @@ module.exports = Dokomo => {
     let countImportant = 0;
     let countNonImportant = 0;
     const inboxLinks = document.querySelectorAll('.J-Ke.n0');
+    const spaceAndChatBadges = document.querySelectorAll(
+      'div.Xa.bSyoAf span.XU',
+    );
+
     if (inboxLinks.length > 0) {
       const { parentNode } = inboxLinks[0];
       if (parentNode) {
@@ -41,6 +45,16 @@ module.exports = Dokomo => {
         }
       }
     }
+
+    if (spaceAndChatBadges.length > 0) {
+      const arr = [...spaceAndChatBadges];
+      const spaceAndChatCount = arr.reduce(
+        (acc, e) => Dokomo.safeParseInt(e.getInnerHTML()) + acc,
+        0,
+      );
+      countImportant += spaceAndChatCount;
+    }
+
     Dokomo.setBadge(countImportant, countNonImportant);
   };
 
