@@ -4,20 +4,20 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   function getNotifications() {
     let unreadNotifications = 0;
     for (const notificationCounterElement of document.querySelectorAll(
       '.notification__count',
     )) {
-      unreadNotifications += Ferdium.safeParseInt(
+      unreadNotifications += Dokomo.safeParseInt(
         notificationCounterElement.textContent,
       );
     }
 
-    Ferdium.setBadge(unreadNotifications);
+    Dokomo.setBadge(unreadNotifications);
   }
-  Ferdium.loop(getNotifications);
+  Dokomo.loop(getNotifications);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

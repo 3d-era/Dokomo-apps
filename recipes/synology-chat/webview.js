@@ -3,14 +3,14 @@ function _interopRequireDefault(obj) {
 }
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
-  Ferdium.handleDarkMode(isEnabled => {
+module.exports = Dokomo => {
+  Dokomo.handleDarkMode(isEnabled => {
     localStorage.setItem('theme', isEnabled ? 'dark' : 'light');
   });
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 
-  Ferdium.loop(() => {
+  Dokomo.loop(() => {
     const unreadElements = document.querySelectorAll(
       '.highlight, .highlight-mention',
     );
@@ -20,6 +20,6 @@ module.exports = Ferdium => {
       unreadCount = unreadElements.length;
     }
 
-    Ferdium.setBadge(unreadCount);
+    Dokomo.setBadge(unreadCount);
   });
 };

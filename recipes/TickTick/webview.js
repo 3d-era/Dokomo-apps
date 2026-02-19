@@ -4,15 +4,15 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     // all overdue items are being counted
     const count = document.querySelectorAll('.duedate-overdue').length;
 
-    Ferdium.setBadge(count);
+    Dokomo.setBadge(count);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

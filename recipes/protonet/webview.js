@@ -4,19 +4,19 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
-    const unreadPrivateMessages = Ferdium.safeParseInt(
+    const unreadPrivateMessages = Dokomo.safeParseInt(
       $('.messages .unread-meeps').text(),
     );
-    const unreadGroupMessages = Ferdium.safeParseInt(
+    const unreadGroupMessages = Dokomo.safeParseInt(
       $('.today .unread-meeps').text(),
     );
 
-    Ferdium.setBadge(unreadPrivateMessages + unreadGroupMessages);
+    Dokomo.setBadge(unreadPrivateMessages + unreadGroupMessages);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

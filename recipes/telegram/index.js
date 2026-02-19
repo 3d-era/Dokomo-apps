@@ -4,13 +4,13 @@ function instrumenEnvironment(webview) {
         if(window.electron) {
             return;
          }
-        
+
         window.electron = { };
     })();
   `);
 }
-module.exports = Ferdium =>
-  class Telegram extends Ferdium {
+module.exports = Dokomo =>
+  class Telegram extends Dokomo {
     // https://www.electronjs.org/docs/latest/api/webview-tag/#dom-events
     get events() {
       return {

@@ -1,3 +1,3 @@
-# Circuit EU for Ferdium
+# Circuit EU for Dokomo
 
-Unofficial Ferdium recipe for [Circuit by Atos Unify](https://eu.yourcircuit.com/)
+Unofficial Dokomo recipe for [Circuit by Atos Unify](https://eu.yourcircuit.com/)

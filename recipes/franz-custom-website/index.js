@@ -1,5 +1,5 @@
-module.exports = Ferdium =>
-  class CustomWebsite extends Ferdium {
+module.exports = Dokomo =>
+  class CustomWebsite extends Dokomo {
     async validateUrl() {
       return true;
     }

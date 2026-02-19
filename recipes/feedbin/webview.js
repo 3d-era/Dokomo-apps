@@ -4,14 +4,14 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     // eslint-disable-next-line no-undef
     const count = feedbin.count_data.unread_entries.length > 0 || 0;
-    Ferdium.setBadge(count);
+    Dokomo.setBadge(count);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

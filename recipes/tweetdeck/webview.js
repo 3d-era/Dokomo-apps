@@ -4,9 +4,9 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   // Tweetdeck redirect fix
-  Ferdium.ipcRenderer.on('redirect-url', (event, url) => {
+  Dokomo.ipcRenderer.on('redirect-url', (event, url) => {
     window.location.assign(url);
   });
 
@@ -14,13 +14,13 @@ module.exports = Ferdium => {
     const elements = document.querySelectorAll('.msg-unread-count');
     let count = 0;
     if (elements[0]) {
-      count = Ferdium.safeParseInt(elements[0].textContent);
+      count = Dokomo.safeParseInt(elements[0].textContent);
     }
 
-    Ferdium.setBadge(count);
+    Dokomo.setBadge(count);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

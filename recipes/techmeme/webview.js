@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = (Ferdium, settings) => {
+module.exports = (Dokomo, settings) => {
   document.addEventListener(
     'click',
     event => {
@@ -16,19 +16,19 @@ module.exports = (Ferdium, settings) => {
           ? link.getAttribute('href')
           : button.getAttribute('title');
 
-        if (!Ferdium.isImage(link)) {
+        if (!Dokomo.isImage(link)) {
           event.preventDefault();
           event.stopPropagation();
 
           if (settings.trapLinkClicks === true || url.includes('techmeme')) {
             window.location.href = url;
           } else {
-            Ferdium.openNewWindow(url);
+            Dokomo.openNewWindow(url);
           }
         }
       }
     },
     true,
   );
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

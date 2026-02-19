@@ -1,1 +1,1 @@
-module.exports = Ferdium => class GamingOnLinux extends Ferdium {};
+module.exports = Dokomo => class GamingOnLinux extends Dokomo {};

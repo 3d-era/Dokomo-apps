@@ -1,5 +1,5 @@
-module.exports = Ferdium => {
-  class Mastodon extends Ferdium {
+module.exports = Dokomo => {
+  class Mastodon extends Dokomo {
     validateServer(URL) {
       const api = `${URL}`;
       return new Promise((resolve, reject) => {

@@ -4,15 +4,15 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = function getMessages() {
     const notificationsCounter = document.querySelector(
       '.js-notificationsCounter',
     );
-    Ferdium.setBadge(Ferdium.safeParseInt(notificationsCounter.textContent));
+    Dokomo.setBadge(Dokomo.safeParseInt(notificationsCounter.textContent));
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

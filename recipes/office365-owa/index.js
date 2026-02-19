@@ -1,8 +1,8 @@
-module.exports = Ferdium =>
-  class Outlook extends Ferdium {
+module.exports = Dokomo =>
+  class Outlook extends Dokomo {
     overrideUserAgent() {
       return window.navigator.userAgent
-        .replaceAll(/(Ferdium|Electron)\/\S+ \([^)]+\)/g, '')
+        .replaceAll(/(Dokomo|Electron)\/\S+ \([^)]+\)/g, '')
         .trim();
     }
   };

@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = function getMessages() {
     // eslint-disable-next-line no-undef
     const unreadChannelsCount = kiwi.state.networks.reduce((count, network) => {
@@ -29,11 +29,11 @@ module.exports = Ferdium => {
       0,
     );
 
-    // set Ferdium badges
-    Ferdium.setBadge(mentionedChannelsCount, unreadChannelsCount);
+    // set Dokomo badges
+    Dokomo.setBadge(mentionedChannelsCount, unreadChannelsCount);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

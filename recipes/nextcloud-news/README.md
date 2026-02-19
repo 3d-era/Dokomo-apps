@@ -1,8 +1,8 @@
-# Ferdium recipe for Nextcloud News
+# Dokomo recipe for Nextcloud News
 
 Nextcloud News is a RSS news reading app for Nextcloud.
 
-To add Nextcloud News service to Ferdium, Nextcloud server address should be provided in the field "Custom server".
+To add Nextcloud News service to Dokomo, Nextcloud server address should be provided in the field "Custom server".
 
 ## Credits
 
@@ -12,10 +12,10 @@ Icons were sourced from <https://github.com/nextcloud/tasks/news/master/img> (`f
 
 ## Links
 
-Ferdium:
+Dokomo:
 
-- [Ferdium](https://ferdium.org/)
-- [Ferdium recipes](https://github.com/ferdium/ferdium-recipes)
+- [Dokomo](https://dokomo.org/)
+- [Dokomo recipes](https://github.com/dokomo/dokomo-recipes)
 
 Nextcloud:
 

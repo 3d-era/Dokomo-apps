@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     let direct = 0;
 
@@ -14,19 +14,19 @@ module.exports = Ferdium => {
       '[data-testid=AppTabBar_Notifications_Link] div div div',
     );
     if (notificationsElement) {
-      direct += Ferdium.safeParseInt(notificationsElement.textContent);
+      direct += Dokomo.safeParseInt(notificationsElement.textContent);
     }
     const DMElement = document.querySelector(
       '[data-testid=AppTabBar_DirectMessage_Link] div div div',
     );
     if (DMElement) {
-      direct += Ferdium.safeParseInt(DMElement.textContent);
+      direct += Dokomo.safeParseInt(DMElement.textContent);
     }
 
-    Ferdium.setBadge(direct);
+    Dokomo.setBadge(direct);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

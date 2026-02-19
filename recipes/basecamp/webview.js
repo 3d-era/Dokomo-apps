@@ -12,7 +12,7 @@ function hide(element) {
   element.style.display = 'none';
 }
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const modal = document.createElement('div');
 
   const waitFor = (condition, callback) => {
@@ -41,7 +41,7 @@ module.exports = Ferdium => {
     }
   }
 
-  // Replace window.alert to hide alerts in Ferdium
+  // Replace window.alert to hide alerts in Dokomo
   const oldAlert = window.alert;
   window.alert = function () {
     // when Google Calendar displays an alert notify the user
@@ -67,5 +67,5 @@ module.exports = Ferdium => {
     }
   });
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'css', 'modal.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'css', 'modal.css'));
 };

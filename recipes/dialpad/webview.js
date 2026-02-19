@@ -4,21 +4,21 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     let unreadCount = 0;
     $.each(
       $('[data-qa-has-unreads]'),
       (idx, item) =>
-        (unreadCount += Ferdium.safeParseInt(
+        (unreadCount += Dokomo.safeParseInt(
           item.attributes['data-qa-has-unreads'].value,
         )),
     );
 
-    Ferdium.setBadge(unreadCount);
+    Dokomo.setBadge(unreadCount);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'whitemode.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'whitemode.css'));
 };

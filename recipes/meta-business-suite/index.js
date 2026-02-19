@@ -1,1 +1,1 @@
-module.exports = Ferdium => class MetaBusinessSuite extends Ferdium {};
+module.exports = Dokomo => class MetaBusinessSuite extends Dokomo {};

@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = (Ferdium, settings) => {
+module.exports = (Dokomo, settings) => {
   const collectCounts = selector => {
     let unreadCount = 0;
     const foldersElement = document.querySelector(selector);
@@ -14,7 +14,7 @@ module.exports = (Ferdium, settings) => {
       );
       for (const child of allScreenReaders) {
         if (child.previousSibling) {
-          unreadCount += Ferdium.safeParseInt(
+          unreadCount += Dokomo.safeParseInt(
             child.previousSibling.textContent,
           );
         }
@@ -24,7 +24,7 @@ module.exports = (Ferdium, settings) => {
   };
 
   // adapted from the franz-custom-website recipe, for opening
-  // links according to  the user's preference (Ferdium/ext.browser)
+  // links according to  the user's preference (Dokomo/ext.browser)
   document.addEventListener(
     'click',
     event => {
@@ -42,14 +42,14 @@ module.exports = (Ferdium, settings) => {
         }
 
         // check if we have a valid URL that is not a script nor an image:
-        if (url && url !== '#' && !Ferdium.isImage(link)) {
+        if (url && url !== '#' && !Dokomo.isImage(link)) {
           event.preventDefault();
           event.stopPropagation();
 
           if (settings.trapLinkClicks === true) {
             window.location.href = url;
           } else {
-            Ferdium.openNewWindow(url);
+            Dokomo.openNewWindow(url);
           }
         }
       }
@@ -62,7 +62,7 @@ module.exports = (Ferdium, settings) => {
     let indirectUnreadCount = 0;
     if (/\/owa/.test(location.pathname)) {
       // classic app
-      directUnreadCount = Ferdium.safeParseInt(
+      directUnreadCount = Dokomo.safeParseInt(
         document.querySelectorAll("span[title*='Inbox'] + div > span")[0]
           ?.textContent,
       );
@@ -76,9 +76,9 @@ module.exports = (Ferdium, settings) => {
       indirectUnreadCount = collectCounts('div[role=tree]:nth-child(4)'); // groups
     }
 
-    Ferdium.setBadge(directUnreadCount, indirectUnreadCount);
+    Dokomo.setBadge(directUnreadCount, indirectUnreadCount);
   };
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

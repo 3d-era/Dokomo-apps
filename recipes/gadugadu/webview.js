@@ -4,21 +4,21 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
-    const updates = Ferdium.safeParseInt(
+    const updates = Dokomo.safeParseInt(
       document.querySelector('i#sr-last-counter').textContent,
     );
     let messages = 0;
     const elements = document.querySelectorAll('.chat-counter:not(.d-none)');
     for (const element of elements) {
-      messages += Ferdium.safeParseInt(element.textContent);
+      messages += Dokomo.safeParseInt(element.textContent);
     }
 
-    Ferdium.setBadge(messages, updates);
+    Dokomo.setBadge(messages, updates);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

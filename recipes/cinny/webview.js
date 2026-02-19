@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   function getMessages() {
     // Number of messages from rooms which has "All Messages" notifications enabled or when mentionned in a room with "Mentions & Keyword" notifications level.
     let directCount = 0;
@@ -17,14 +17,14 @@ module.exports = Ferdium => {
       if (badge.childNodes.length === 0) {
         indirectCount += 1;
       } else {
-        directCount += Ferdium.safeParseInt(badge.childNodes[0].textContent);
+        directCount += Dokomo.safeParseInt(badge.childNodes[0].textContent);
       }
     }
 
-    // Set Ferdium badge
-    Ferdium.setBadge(directCount, indirectCount);
+    // Set Dokomo badge
+    Dokomo.setBadge(directCount, indirectCount);
   }
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

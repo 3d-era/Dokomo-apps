@@ -1,1 +1,1 @@
-module.exports = Ferdium => class SmartSheet extends Ferdium {};
+module.exports = Dokomo => class SmartSheet extends Dokomo {};

@@ -1,5 +1,5 @@
-module.exports = Ferdium =>
-  class RocketChat extends Ferdium {
+module.exports = Dokomo =>
+  class RocketChat extends Dokomo {
     async validateUrl(url) {
       try {
         const resp = await window.fetch(url, {

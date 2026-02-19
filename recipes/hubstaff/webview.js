@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   // TODO: If your hubstaff service has unread messages, uncomment these lines to implement the logic for updating the badges
   const getMessages = () => {
     // TODO: Insert your notification-finding code here
@@ -14,16 +14,16 @@ module.exports = Ferdium => {
       '.notifications-number',
     );
     if (notificationContainers) {
-      directMessages = Ferdium.safeParseInt(
+      directMessages = Dokomo.safeParseInt(
         notificationContainers[0].textContent,
       );
-      indirectMessages = Ferdium.safeParseInt(
+      indirectMessages = Dokomo.safeParseInt(
         notificationContainers[1].textContent,
       );
     }
-    Ferdium.setBadge(directMessages, indirectMessages);
+    Dokomo.setBadge(directMessages, indirectMessages);
   };
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

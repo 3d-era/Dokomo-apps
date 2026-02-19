@@ -1,5 +1,5 @@
-module.exports = Ferdium =>
-  class Zimbra extends Ferdium {
+module.exports = Dokomo =>
+  class Zimbra extends Dokomo {
     async validateUrl() {
       return true;
     }

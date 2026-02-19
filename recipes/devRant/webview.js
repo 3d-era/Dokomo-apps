@@ -15,7 +15,7 @@ setTimeout(() => {
   }
 }, 1000);
 
-module.exports = (Ferdium, settings) => {
+module.exports = (Dokomo, settings) => {
   const getMessages = () => {
     const elements = document.querySelectorAll('.CxUIE, .unread, ._0LqQ');
     let count = 0;
@@ -28,11 +28,11 @@ module.exports = (Ferdium, settings) => {
       }
     }
 
-    Ferdium.setBadge(count);
+    Dokomo.setBadge(count);
   };
 
   window.addEventListener('beforeunload', async () => {
-    Ferdium.clearStorageData(settings.id, {
+    Dokomo.clearStorageData(settings.id, {
       storages: [
         'appcache',
         'serviceworkers',
@@ -41,10 +41,10 @@ module.exports = (Ferdium, settings) => {
         'indexdb',
       ],
     });
-    Ferdium.releaseServiceWorkers();
+    Dokomo.releaseServiceWorkers();
   });
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

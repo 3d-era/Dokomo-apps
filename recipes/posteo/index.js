@@ -1,1 +1,1 @@
-module.exports = Ferdium => class Posteo extends Ferdium {};
+module.exports = Dokomo => class Posteo extends Dokomo {};

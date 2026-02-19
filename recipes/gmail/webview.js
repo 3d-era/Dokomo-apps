@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   // if the user is on gmail's landing page, go to the login page.
   if (
     location.hostname === 'www.google.com' &&
@@ -33,11 +33,11 @@ module.exports = Ferdium => {
             if (unreadCount.includes(':')) {
               const counts = unreadCount
                 .split(':')
-                .map(s => Ferdium.safeParseInt(s.replaceAll(/[^\p{N}]/gu, '')));
+                .map(s => Dokomo.safeParseInt(s.replaceAll(/[^\p{N}]/gu, '')));
               countImportant = counts[0];
               countNonImportant = counts[1] - counts[0];
             } else {
-              countImportant = Ferdium.safeParseInt(
+              countImportant = Dokomo.safeParseInt(
                 unreadCount.replaceAll(/[^\p{N}]/gu, ''),
               );
             }
@@ -49,16 +49,16 @@ module.exports = Ferdium => {
     if (spaceAndChatBadges.length > 0) {
       const arr = [...spaceAndChatBadges];
       const spaceAndChatCount = arr.reduce(
-        (acc, e) => Ferdium.safeParseInt(e.getInnerHTML()) + acc,
+        (acc, e) => Dokomo.safeParseInt(e.getInnerHTML()) + acc,
         0,
       );
       countImportant += spaceAndChatCount;
     }
 
-    Ferdium.setBadge(countImportant, countNonImportant);
+    Dokomo.setBadge(countImportant, countNonImportant);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

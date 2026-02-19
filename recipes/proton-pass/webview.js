@@ -5,7 +5,7 @@ function _interopRequireDefault(obj) {
 const _path = _interopRequireDefault(require('path'));
 
 // fix React's mangling of the search field
-// see https://github.com/ferdium/ferdium-app/issues/1844
+// see https://github.com/dokomo/dokomo-app/issues/1844
 const SELECTOR = 'input[data-testid="input-input-element"]';
 
 const wire = el => {
@@ -42,15 +42,15 @@ const findAndWire = () => {
   if (el) wire(el);
 };
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   // TODO: If your Proton Pass service has unread messages, uncomment these lines to implement the logic for updating the badges
   // const getMessages = () => {
   //   // TODO: Insert your notification-finding code here
-  //   Ferdium.setBadge(0, 0);
+  //   Dokomo.setBadge(0, 0);
   // };
-  // Ferdium.loop(getMessages);
+  // Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', findAndWire, { once: true });

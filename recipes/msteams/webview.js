@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     let messages = 0;
 
@@ -20,22 +20,22 @@ module.exports = Ferdium => {
 
     if (badges) {
       Array.prototype.forEach.call(badges, badge => {
-        messages += Ferdium.safeParseInt(badge.textContent);
+        messages += Dokomo.safeParseInt(badge.textContent);
       });
     }
 
     const indirectMessages =
       document.querySelectorAll('.app-bar-mention').length;
 
-    Ferdium.setBadge(messages, indirectMessages);
+    Dokomo.setBadge(messages, indirectMessages);
   };
 
   window.addEventListener('beforeunload', async () => {
-    Ferdium.releaseServiceWorkers();
+    Dokomo.releaseServiceWorkers();
   });
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
-  Ferdium.injectJSUnsafe(_path.default.join(__dirname, 'webview-unsafe.js'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectJSUnsafe(_path.default.join(__dirname, 'webview-unsafe.js'));
 };

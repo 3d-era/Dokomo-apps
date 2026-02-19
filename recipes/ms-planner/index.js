@@ -1,8 +1,8 @@
-module.exports = Ferdium =>
-  class Planner extends Ferdium {
+module.exports = Dokomo =>
+  class Planner extends Dokomo {
     overrideUserAgent() {
       return window.navigator.userAgent
-        .replace(/(Ferdium|Electron)(\S+\s)/g, '')
+        .replace(/(Dokomo|Electron)(\S+\s)/g, '')
         .replace(/(Chrome\/)([^ ]*)/g, '$163.0.3239.84');
     }
 

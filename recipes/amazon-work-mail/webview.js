@@ -17,25 +17,25 @@ const reload = EventType =>
     }
   });
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getUnread = () => {
     const nodes = document.querySelectorAll('.giraffe-hierarchy-node-counter');
     let counter = 0;
 
     for (const node of nodes) {
-      counter += Ferdium.safeParseInt(node.textContent);
+      counter += Dokomo.safeParseInt(node.textContent);
     }
 
-    Ferdium.setBadge(counter);
+    Dokomo.setBadge(counter);
   };
 
   if (!window.location.pathname.includes('auth')) {
-    Ferdium.loop(getUnread);
+    Dokomo.loop(getUnread);
 
     window.setInterval(() => {
       reload('click');
     }, 60_000);
   }
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

@@ -4,17 +4,17 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const inbox = document.querySelector(
       '.v-MailboxSource--inbox .v-MailboxSource-badge',
     );
 
-    const messages = inbox ? Ferdium.safeParseInt(inbox.textContent) : 0;
-    Ferdium.setBadge(messages);
+    const messages = inbox ? Dokomo.safeParseInt(inbox.textContent) : 0;
+    Dokomo.setBadge(messages);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectJSUnsafe(_path.default.join(__dirname, 'webview-unsafe.js'));
+  Dokomo.injectJSUnsafe(_path.default.join(__dirname, 'webview-unsafe.js'));
 };

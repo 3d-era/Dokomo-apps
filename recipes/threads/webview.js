@@ -4,9 +4,9 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = (Ferdium, settings) => {
+module.exports = (Dokomo, settings) => {
   // adapted from the franz-custom-website recipe, for opening
-  // links according to  the user's preference (Ferdium/ext.browser)
+  // links according to  the user's preference (Dokomo/ext.browser)
   document.addEventListener(
     'click',
     event => {
@@ -24,14 +24,14 @@ module.exports = (Ferdium, settings) => {
         }
 
         // check if we have a valid URL that is not a script nor an image:
-        if (url && url !== '#' && !Ferdium.isImage(link)) {
+        if (url && url !== '#' && !Dokomo.isImage(link)) {
           event.preventDefault();
           event.stopPropagation();
 
           if (settings.trapLinkClicks === true) {
             window.location.href = url;
           } else {
-            Ferdium.openNewWindow(url);
+            Dokomo.openNewWindow(url);
           }
         }
       }
@@ -41,18 +41,18 @@ module.exports = (Ferdium, settings) => {
 
   const getMessages = () => {
     const element = document.querySelector('a[href^="/direct/inbox"] span');
-    Ferdium.setBadge(
+    Dokomo.setBadge(
       element && element.textContent
-        ? Ferdium.safeParseInt(element.textContent)
+        ? Dokomo.safeParseInt(element.textContent)
         : 0,
     );
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  // https://github.com/ferdium/ferdium-recipes/blob/9d715597a600710c20f75412d3dcd8cdb7b3c39e/docs/frontend_api.md#usage-4
+  // https://github.com/dokomo/dokomo-recipes/blob/9d715597a600710c20f75412d3dcd8cdb7b3c39e/docs/frontend_api.md#usage-4
   // Helper that activates DarkReader and injects your darkmode.css at the same time
-  Ferdium.handleDarkMode(isEnabled => {
+  Dokomo.handleDarkMode(isEnabled => {
     const url = new URL(window.location.href);
     const { searchParams } = url;
     const isDarkModeParam = searchParams.get('theme');
@@ -74,5 +74,5 @@ module.exports = (Ferdium, settings) => {
       : null;
   });
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

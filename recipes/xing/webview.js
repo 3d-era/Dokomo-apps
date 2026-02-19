@@ -4,14 +4,14 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   function getUnreadConversations() {
-    Ferdium.setBadge(
+    Dokomo.setBadge(
       document.querySelector('#unread-conversations').textContent,
     );
   }
 
-  Ferdium.loop(getUnreadConversations);
+  Dokomo.loop(getUnreadConversations);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

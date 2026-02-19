@@ -4,15 +4,15 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = root => {
     // it's either localised "Inbox" name or unread count.
     const unread = root.querySelector(
       `.mailbox-list-pane .mailbox-list .mailbox-list-item:first-child p:last-child`,
     );
     if (!unread) return;
-    const count = Ferdium.safePerseInt(unread.textContent) ?? 0;
-    Ferdium.setBadge(count);
+    const count = Dokomo.safePerseInt(unread.textContent) ?? 0;
+    Dokomo.setBadge(count);
   };
 
   const getActiveDialogTitle = root => {
@@ -24,14 +24,14 @@ module.exports = Ferdium => {
       const sender = activeThread.querySelector(
         '.thread-header .thread-participants',
       );
-      Ferdium.setDialogTitle(sender.textContent);
+      Dokomo.setDialogTitle(sender.textContent);
       return;
     }
 
     const activeMailbox = root.querySelector(
       `.mailbox-list-pane .mailbox-list .mailbox-list-item[aria-selected="true"] p`,
     );
-    Ferdium.setDialogTitle(activeMailbox.textContent);
+    Dokomo.setDialogTitle(activeMailbox.textContent);
   };
 
   const loopFunc = () => {
@@ -43,7 +43,7 @@ module.exports = Ferdium => {
     getActiveDialogTitle(childDocument);
   };
 
-  Ferdium.loop(loopFunc);
+  Dokomo.loop(loopFunc);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     let count = 0;
     for (const e of document.querySelectorAll('.sg-counter-badge')) {
@@ -12,9 +12,9 @@ module.exports = Ferdium => {
         count += Number.parseInt(e.textContent);
       }
     }
-    Ferdium.setBadge(count, 0);
+    Dokomo.setBadge(count, 0);
   };
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

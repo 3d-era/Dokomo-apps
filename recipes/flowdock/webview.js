@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const directMessages = document.querySelectorAll(
       '.activity-indicator-mentions',
@@ -13,11 +13,11 @@ module.exports = Ferdium => {
       '.activity-indicator-chat',
     ).length;
 
-    // set Ferdium badge
-    Ferdium.setBadge(directMessages, indirectMessages);
+    // set Dokomo badge
+    Dokomo.setBadge(directMessages, indirectMessages);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

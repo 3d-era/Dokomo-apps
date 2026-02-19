@@ -1,5 +1,5 @@
-module.exports = Ferdium =>
-  class Mattermost extends Ferdium {
+module.exports = Dokomo =>
+  class Mattermost extends Dokomo {
     async validateUrl(url) {
       try {
         const resp = await window.fetch(url, {

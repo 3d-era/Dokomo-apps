@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const newsDOM = document.querySelectorAll(
       "div[title='All'] > .LeftnavListRow__count",
@@ -18,13 +18,13 @@ module.exports = Ferdium => {
       counter =
         textContent.includes('K') || textContent.includes('+')
           ? `${textContent.slice(0, Math.max(0, textContent.indexOf('K')))}000`
-          : Ferdium.safeParseInt(textContent);
+          : Dokomo.safeParseInt(textContent);
     }
 
-    Ferdium.setBadge(counter);
+    Dokomo.setBadge(counter);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

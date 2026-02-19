@@ -1,8 +1,8 @@
-module.exports = Ferdium =>
-  class Threads extends Ferdium {
+module.exports = Dokomo =>
+  class Threads extends Dokomo {
     overrideUserAgent() {
       return window.navigator.userAgent
-        .replaceAll(/(Ferdium|Electron)\/\S+ \([^)]+\)/g, '')
+        .replaceAll(/(Dokomo|Electron)\/\S+ \([^)]+\)/g, '')
         .trim();
     }
   };

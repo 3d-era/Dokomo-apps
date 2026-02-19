@@ -1,1 +1,1 @@
-module.exports = Ferdium => class Localazy extends Ferdium {};
+module.exports = Dokomo => class Localazy extends Dokomo {};

@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     let directCount = 0;
     let indirectCount = 0;
@@ -17,7 +17,7 @@ module.exports = Ferdium => {
       );
 
       if (unreadBadge && unreadBadge.textContent) {
-        count = Ferdium.safeParseInt(unreadBadge.textContent);
+        count = Dokomo.safeParseInt(unreadBadge.textContent);
       }
 
       if (count > 0) {
@@ -35,10 +35,10 @@ module.exports = Ferdium => {
         }
       }
     });
-    Ferdium.setBadge(directCount, indirectCount);
+    Dokomo.setBadge(directCount, indirectCount);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

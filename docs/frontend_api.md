@@ -1,5 +1,5 @@
 - [Frontend API](#frontend-api)
-  - [Ferdium Class Methods](#ferdium-class-methods)
+  - [Dokomo Class Methods](#dokomo-class-methods)
     - [setBadge(directMessages, [indirectMessages])](#setbadgedirectmessages-indirectmessages)
       - [Arguments](#arguments)
       - [Usage](#usage)
@@ -38,9 +38,9 @@
 
 # Frontend API
 
-Provides a set of helper functions to integrate the service into [Ferdium](https://ferdium.org).
+Provides a set of helper functions to integrate the service into [Dokomo](https://dokomo.org).
 
-## Ferdium Class Methods
+## Dokomo Class Methods
 
 ### setBadge(directMessages, [indirectMessages])
 
@@ -59,11 +59,11 @@ Sets the unread message badge
 #### Usage
 
 ```js
-Ferdium.setBadge(4, 2);
+Dokomo.setBadge(4, 2);
 
 // or
 
-Ferdium.setBadge(3);
+Dokomo.setBadge(3);
 ```
 
 ### setDialogTitle(title)
@@ -79,7 +79,7 @@ Sets the active dialog title to the app title
 #### Usage
 
 ```js
-Ferdium.setDialogTitle('Dialog title');
+Dokomo.setDialogTitle('Dialog title');
 ```
 
 ### injectCSS(pathToCssFile)
@@ -98,20 +98,20 @@ Injects the contents of one or more CSS files into the current webview
 const path = require('path');
 
 // inject a single css file
-Ferdium.injectCSS(path.join(__dirname, 'style.css'));
+Dokomo.injectCSS(path.join(__dirname, 'style.css'));
 
 // inject multiple css files
 const globalStyles = path.join(__dirname, 'global.css');
 const focusModeStyles = path.join(__dirname, 'focusmode.css');
 
-Ferdium.injectCSS(globalStyles, focusModeStyles);
+Dokomo.injectCSS(globalStyles, focusModeStyles);
 ```
 
 ### injectJSUnsafe(pathToJsFile)
 
 Injects the contents of one or more JavaScript files into the current webview without context isolation
 
-Ferdium uses context isolation to prevent services from accessing Node.js APIs in the webview.
+Dokomo uses context isolation to prevent services from accessing Node.js APIs in the webview.
 If you want to expose objects to the service (eg. via the `window` object) or interact with the Javascript loaded by the service you must do so from a script injected with this method.
 Trying to overwrite properties of the `window` object or other objects or trying to interact with the Javascript loaded by the service from `webview.js` will fail due to context isolation.
 
@@ -129,18 +129,18 @@ The code is executed as if part of the body of a Javascript function, ie. you sh
 const path = require('path');
 
 // inject a single css file
-Ferdium.injectJSUnsafe(path.join(__dirname, 'webview-unsafe.js'));
+Dokomo.injectJSUnsafe(path.join(__dirname, 'webview-unsafe.js'));
 
 // inject multiple css files
 const globalScripts = path.join(__dirname, 'global.js);
 const focusModeScripts = path.join(__dirname, 'focusmode.js);
 
-Ferdium.injectCSS(globalScripts, focusModeScripts);
+Dokomo.injectCSS(globalScripts, focusModeScripts);
 ```
 
 ### loop(action)
 
-Runs an action every X milliseconds (Ferdium default is currently 1s)
+Runs an action every X milliseconds (Dokomo default is currently 1s)
 
 #### Arguments
 
@@ -152,19 +152,19 @@ Runs an action every X milliseconds (Ferdium default is currently 1s)
 // slack integration
 const path = require('path');
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const directMessages = $('.unread_highlights, .unread_highlight').not(
       '.hidden',
     ).length;
     const indirectMessages = $('.unread').length - directMessages;
 
-    Ferdium.setBadge(directMessages, indirectMessages);
+    Dokomo.setBadge(directMessages, indirectMessages);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(path.join(__dirname, 'style.css'));
+  Dokomo.injectCSS(path.join(__dirname, 'style.css'));
 };
 ```
 
@@ -180,22 +180,22 @@ Runs `fn` on every notification created by the service before sending them to th
 
 ```js
 // messenger integration
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     let count = document.querySelectorAll(
       '._5fx8:not(._569x),._1ht3:not(._569x)',
     ).length;
     const messageRequestsElement = document.querySelector('._5nxf');
     if (messageRequestsElement) {
-      count += Ferdium.safeParseInt(messageRequestsElement.textContent);
+      count += Dokomo.safeParseInt(messageRequestsElement.textContent);
     }
 
-    Ferdium.setBadge(count);
+    Dokomo.setBadge(count);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.onNotify(notification => {
+  Dokomo.onNotify(notification => {
     if (typeof notification.title !== 'string') {
       notification.title =
         ((notification.title.props || {}).content || [])[0] || 'Messenger';
@@ -212,7 +212,7 @@ You can use a `darkmode.css` to automatically get the service into a dark theme.
 
 This handler should take the necessary steps to (de-)activate dark mode on the page, e.g. by clicking a button or flipping a switch.
 
-Ferdium won't activate DarkReader or inject `darkmode.css` if the recipe has defined a custom handler. If you still need to do this, you can use the `injectDarkModeStyle` or `enableDarkMode` function provided as the second argument.
+Dokomo won't activate DarkReader or inject `darkmode.css` if the recipe has defined a custom handler. If you still need to do this, you can use the `injectDarkModeStyle` or `enableDarkMode` function provided as the second argument.
 
 #### Arguments
 
@@ -232,7 +232,7 @@ Ferdium won't activate DarkReader or inject `darkmode.css` if the recipe has def
 
 ```JavaScript
 // Handler that works for Reddit
-Ferdium.handleDarkMode((isEnabled, helpers) => {
+Dokomo.handleDarkMode((isEnabled, helpers) => {
   // Open dropdown menu if not already open
   const menu = document.querySelector('#USER_DROPDOWN_ID');
   if (menu.getAttribute('aria-expanded') === 'false') {
@@ -254,7 +254,7 @@ Ferdium.handleDarkMode((isEnabled, helpers) => {
 // --- or ---
 
 // Helper that activates DarkReader and injects your darkmode.css at the same time
-Ferdium.handleDarkMode((isEnabled, helpers) => {
+Dokomo.handleDarkMode((isEnabled, helpers) => {
   if (isEnabled) {
     helpers.enableDarkMode();
     if (!helpers.isDarkModeStyleInjected()) {
@@ -279,7 +279,7 @@ While exiting/closing/disabling the service, if you want to clear the local stor
 #### Usage
 
 ```JavaScript
-  Ferdium.clearStorageData(settings.id, {
+  Dokomo.clearStorageData(settings.id, {
       storages: [
         'appcache',
         'serviceworkers',
@@ -305,7 +305,7 @@ A utility method that can be used to safely parse the text content (handles null
 #### Usage
 
 ```JavaScript
-Ferdium.safeParseInt(mySelector.innerText)
+Dokomo.safeParseInt(mySelector.innerText)
 ```
 
 ### isImage(link)
@@ -319,12 +319,12 @@ A utility method that can be used to verify if a link is an image. Returns `true
 #### Usage
 
 ```JavaScript
-Ferdium.isImage(link)
+Dokomo.isImage(link)
 ```
 
 ### setDialogTitle(title)
 
-When you want to set the title of the Ferdium window (while this service is active or in focus), you can use this function
+When you want to set the title of the Dokomo window (while this service is active or in focus), you can use this function
 
 #### Arguments
 
@@ -333,5 +333,5 @@ When you want to set the title of the Ferdium window (while this service is acti
 #### Usage
 
 ```JavaScript
-Ferdium.setDialogTitle(element ? element.textContent : null);
+Dokomo.setDialogTitle(element ? element.textContent : null);
 ```

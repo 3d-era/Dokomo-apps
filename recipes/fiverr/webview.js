@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const hasUnreads = !!document.querySelector(
       '.unread-icon,.contact aside p',
@@ -12,21 +12,21 @@ module.exports = Ferdium => {
     const count = document
       .querySelectorAll('.contact aside p')
       .values()
-      .map(el => Ferdium.safeParseInt(el.textContent) || 1)
+      .map(el => Dokomo.safeParseInt(el.textContent) || 1)
       .reduce((a, b) => a + b, 0);
 
-    Ferdium.setBadge(count || +hasUnreads);
+    Dokomo.setBadge(count || +hasUnreads);
   };
 
   const getDialogTitle = () => {
     const username = location.pathname.match(/^\/inbox\/([^/]+)/)?.[1];
-    Ferdium.setDialogTitle(username ?? null);
+    Dokomo.setDialogTitle(username ?? null);
   };
 
-  Ferdium.loop(() => {
+  Dokomo.loop(() => {
     getMessages();
     getDialogTitle();
   });
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

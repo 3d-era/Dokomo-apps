@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = (Ferdium, settings) => {
+module.exports = (Dokomo, settings) => {
   const getMessages = () => {
     let directCount = 0;
     const directCountPerServer = document.querySelectorAll(
@@ -12,21 +12,21 @@ module.exports = (Ferdium, settings) => {
     );
 
     for (const directCountBadge of directCountPerServer) {
-      directCount += Ferdium.safeParseInt(directCountBadge.textContent);
+      directCount += Dokomo.safeParseInt(directCountBadge.textContent);
     }
 
     const indirectCountPerServer = document.querySelectorAll(
       '[class*="modeUnread-"]',
     ).length;
 
-    Ferdium.setBadge(directCount, indirectCountPerServer);
+    Dokomo.setBadge(directCount, indirectCountPerServer);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 
-  // TODO: See how this can be moved into the main ferdium app and sent as an ipc message for opening with a new window or same Ferdium recipe's webview based on user's preferences
+  // TODO: See how this can be moved into the main dokomo app and sent as an ipc message for opening with a new window or same Dokomo recipe's webview based on user's preferences
   document.addEventListener(
     'click',
     event => {
@@ -38,14 +38,14 @@ module.exports = (Ferdium, settings) => {
           ? link.getAttribute('href')
           : button.getAttribute('title');
 
-        if (!Ferdium.isImage(link)) {
+        if (!Dokomo.isImage(link)) {
           event.preventDefault();
           event.stopPropagation();
 
           if (settings.trapLinkClicks === true) {
             window.location.href = url;
           } else {
-            Ferdium.openNewWindow(url);
+            Dokomo.openNewWindow(url);
           }
         }
       }

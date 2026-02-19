@@ -4,18 +4,18 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const elements = document.querySelectorAll(
       'div#chat_list > ul#chat_grp_lst > li#item_chat > dl#chat_count > span#new',
     );
     let count = elements[0]
-      ? (count = Ferdium.safeParseInt(elements[0].textContent))
+      ? (count = Dokomo.safeParseInt(elements[0].textContent))
       : 0;
 
-    Ferdium.setBadge(count);
+    Dokomo.setBadge(count);
   };
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

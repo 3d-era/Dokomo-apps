@@ -1,5 +1,5 @@
-module.exports = Ferdium =>
-  class Pleroma extends Ferdium {
+module.exports = Dokomo =>
+  class Pleroma extends Dokomo {
     async validateUrl(url) {
       try {
         const resp = await window.fetch(`${url}/api/v1/instance`, {

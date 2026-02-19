@@ -4,26 +4,26 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const directSelector = document.querySelectorAll(
       '.app-navigation-entry-utils-counter.highlighted',
     );
     const direct = directSelector
-      ? Ferdium.safeParseInt(directSelector.length)
+      ? Dokomo.safeParseInt(directSelector.length)
       : 0;
 
     const indirectSelector = document.querySelectorAll(
       '.app-navigation-entry-utils-counter:not(.highlighted)',
     );
     const indirect = indirectSelector
-      ? Ferdium.safeParseInt(indirectSelector.length)
+      ? Dokomo.safeParseInt(indirectSelector.length)
       : 0;
 
-    Ferdium.setBadge(direct, indirect);
+    Dokomo.setBadge(direct, indirect);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

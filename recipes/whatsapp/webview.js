@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   let dbCache;
 
   const getMessages = () => {
@@ -26,7 +26,7 @@ module.exports = Ferdium => {
           }
         }
 
-        Ferdium.setBadge(unreadCount, unreadMutedCount);
+        Dokomo.setBadge(unreadCount, unreadMutedCount);
       };
 
       query.addEventListener('error', event => {
@@ -57,12 +57,12 @@ module.exports = Ferdium => {
   };
 
   // inject webview hacking script
-  Ferdium.injectJSUnsafe(_path.default.join(__dirname, 'webview-unsafe.js'));
+  Dokomo.injectJSUnsafe(_path.default.join(__dirname, 'webview-unsafe.js'));
 
   const getActiveDialogTitle = () => {
     const element = document.querySelector('header .emoji-texttt');
 
-    Ferdium.setDialogTitle(element ? element.textContent : '');
+    Dokomo.setDialogTitle(element ? element.textContent : '');
   };
 
   const loopFunc = () => {
@@ -71,10 +71,10 @@ module.exports = Ferdium => {
   };
 
   window.addEventListener('beforeunload', async () => {
-    Ferdium.releaseServiceWorkers();
+    Dokomo.releaseServiceWorkers();
   });
 
-  Ferdium.handleDarkMode(isEnabled => {
+  Dokomo.handleDarkMode(isEnabled => {
     if (isEnabled) {
       document.body.classList.add('dark');
     } else {
@@ -82,7 +82,7 @@ module.exports = Ferdium => {
     }
   });
 
-  Ferdium.loop(loopFunc);
+  Dokomo.loop(loopFunc);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

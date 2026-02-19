@@ -4,14 +4,14 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     // This selects the first folder (the inbox and reads its unread messages count)
     const inboxField = document.querySelector('.ws-tree-node-content');
     const inboxCountField = inboxField.querySelector('.ws-tree-node-badge');
     const inboxCountText = inboxCountField ? inboxCountField.textContent : null;
     const inboxCount = inboxCountText
-      ? Ferdium.safeParseInt(inboxCountText)
+      ? Dokomo.safeParseInt(inboxCountText)
       : 0;
 
     let unimportantCount = 0;
@@ -24,14 +24,14 @@ module.exports = Ferdium => {
         ? totalCountField.textContent
         : null;
       unimportantCount = totalCountText
-        ? Ferdium.safeParseInt(totalCountText)
+        ? Dokomo.safeParseInt(totalCountText)
         : 0;
     }
 
-    Ferdium.setBadge(inboxCount, unimportantCount);
+    Dokomo.setBadge(inboxCount, unimportantCount);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

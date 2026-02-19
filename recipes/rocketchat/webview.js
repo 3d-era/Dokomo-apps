@@ -4,26 +4,26 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const title = document.querySelector('title');
     const matches = title.textContent.match(/^\((\S*?)\)/);
 
     if (matches) {
-      const count = Ferdium.safeParseInt(matches[1], 10);
+      const count = Dokomo.safeParseInt(matches[1], 10);
       if (count) {
-        Ferdium.setBadge(count);
+        Dokomo.setBadge(count);
       } else {
-        Ferdium.setBadge(0, 1);
+        Dokomo.setBadge(0, 1);
       }
     } else {
-      Ferdium.setBadge(0);
+      Dokomo.setBadge(0);
     }
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 
   const getTeamIcon = function getTeamIcon() {
     const manifestElement = document.querySelector('link[rel="manifest"]');
@@ -48,7 +48,7 @@ module.exports = Ferdium => {
       const response = JSON.parse(this.responseText);
 
       if (response.icons.length > 0) {
-        Ferdium.setAvatarImage(
+        Dokomo.setAvatarImage(
           `${window.location.protocol}//${window.location.host}${response.icons[0].src}`,
         );
       }

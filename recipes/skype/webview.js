@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = (Ferdium, settings) => {
+module.exports = (Dokomo, settings) => {
   const getMessages = () => {
     let count = 0;
     const container = document.querySelector('[role="tablist"] > button > div');
@@ -21,21 +21,21 @@ module.exports = (Ferdium, settings) => {
             '[data-text-as-pseudo-element]',
           );
           if (element && element.dataset) {
-            count = Ferdium.safeParseInt(element.dataset.textAsPseudoElement);
+            count = Dokomo.safeParseInt(element.dataset.textAsPseudoElement);
           }
         }
       }
     }
 
-    Ferdium.setBadge(count);
+    Dokomo.setBadge(count);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
-  Ferdium.injectJSUnsafe(_path.default.join(__dirname, 'webview-unsafe.js'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectJSUnsafe(_path.default.join(__dirname, 'webview-unsafe.js'));
 
-  // TODO: See how this can be moved into the main ferdium app and sent as an ipc message for opening with a new window or same Ferdium recipe's webview based on user's preferences
+  // TODO: See how this can be moved into the main dokomo app and sent as an ipc message for opening with a new window or same Dokomo recipe's webview based on user's preferences
   document.addEventListener(
     'click',
     event => {
@@ -51,7 +51,7 @@ module.exports = (Ferdium, settings) => {
         event.stopPropagation();
 
         if (url.includes('api.asm.skype.com')) {
-          // Always open file downloads in Ferdium, rather than the external browser
+          // Always open file downloads in Dokomo, rather than the external browser
           window.location.href = url;
           return;
         }
@@ -59,7 +59,7 @@ module.exports = (Ferdium, settings) => {
         if (settings.trapLinkClicks === true) {
           window.location.href = url;
         } else {
-          Ferdium.openNewWindow(url);
+          Dokomo.openNewWindow(url);
         }
       }
     },

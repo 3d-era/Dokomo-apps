@@ -1,1 +1,1 @@
-module.exports = Ferdium => class Affine extends Ferdium {};
+module.exports = Dokomo => class Affine extends Dokomo {};

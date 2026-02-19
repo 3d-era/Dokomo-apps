@@ -1,8 +1,8 @@
-# Ferdium recipe for Nextcloud News
+# Dokomo recipe for Nextcloud News
 
 Nextcloud Deck is a kanban style organization tool aimed at personal planning and project organization for teams integrated with Nextcloud.
 
-To add Nextcloud Deck service to Ferdium, Nextcloud server address should be provided in the field "Custom server".
+To add Nextcloud Deck service to Dokomo, Nextcloud server address should be provided in the field "Custom server".
 
 ## Credits
 
@@ -12,10 +12,10 @@ Icon was sourced from <https://github.com/nextcloud/deck/tree/main/img> (`deck.s
 
 ## Links
 
-Ferdium:
+Dokomo:
 
-- [Ferdium](https://ferdium.org/)
-- [Ferdium recipes](https://github.com/ferdium/ferdium-recipes)
+- [Dokomo](https://dokomo.org/)
+- [Dokomo recipes](https://github.com/dokomo/dokomo-recipes)
 
 Nextcloud:
 

@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = function getMessages() {
     // Initialize empty vars
     let unread = 0;
@@ -18,14 +18,14 @@ module.exports = Ferdium => {
     // Some logic to handle the match groups
     unread = match !== null && match.length > 0 ? match[0] : 0;
     // Set unread msgs badge
-    Ferdium.setBadge(Number.parseInt(unread, 10));
+    Dokomo.setBadge(Number.parseInt(unread, 10));
   };
 
   const loopFunc = () => {
     getMessages();
   };
 
-  Ferdium.loop(loopFunc);
+  Dokomo.loop(loopFunc);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

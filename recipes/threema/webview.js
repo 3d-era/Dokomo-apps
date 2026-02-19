@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const elements = document.querySelectorAll(
       '.badge.unread-count:not(.ng-hide)',
@@ -13,17 +13,17 @@ module.exports = Ferdium => {
 
     for (const element of elements) {
       try {
-        count += Ferdium.safeParseInt(element.textContent);
+        count += Dokomo.safeParseInt(element.textContent);
       } catch (error) {
         console.error(error);
       }
     }
 
-    // set Ferdium badge
-    Ferdium.setBadge(count);
+    // set Dokomo badge
+    Dokomo.setBadge(count);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

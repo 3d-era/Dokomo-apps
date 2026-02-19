@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   function getTasks() {
     let incompleteCount = 0;
 
@@ -14,14 +14,14 @@ module.exports = Ferdium => {
 
     if (countEls.length > 0) {
       for (const el of countEls) {
-        incompleteCount += Ferdium.safeParseInt(el.textContent);
+        incompleteCount += Dokomo.safeParseInt(el.textContent);
       }
     }
 
-    Ferdium.setBadge(incompleteCount);
+    Dokomo.setBadge(incompleteCount);
   }
 
-  Ferdium.loop(getTasks);
+  Dokomo.loop(getTasks);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

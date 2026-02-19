@@ -1,8 +1,8 @@
-module.exports = Ferdium =>
-  class Gotomeeting extends Ferdium {
+module.exports = Dokomo =>
+  class Gotomeeting extends Dokomo {
     overrideUserAgent() {
       return window.navigator.userAgent.replaceAll(
-        /(Ferdium|Electron)\/\S+ \([^)]+\)/g,
+        /(Dokomo|Electron)\/\S+ \([^)]+\)/g,
         '',
       );
     }

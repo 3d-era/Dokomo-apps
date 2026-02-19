@@ -1,5 +1,5 @@
-module.exports = Ferdium =>
-  class Misskey extends Ferdium {
+module.exports = Dokomo =>
+  class Misskey extends Dokomo {
     constructor(...args) {
       let _temp;
       // eslint-disable-next-line constructor-super

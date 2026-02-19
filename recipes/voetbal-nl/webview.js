@@ -4,19 +4,19 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   function getMessages() {
     let direct = 0;
     let indirect = 0;
-    const FerdiumData = document.querySelector('#FerdiumMessages').dataset;
-    if (FerdiumData) {
-      direct = FerdiumData.direct;
-      indirect = FerdiumData.indirect;
+    const DokomoData = document.querySelector('#DokomoMessages').dataset;
+    if (DokomoData) {
+      direct = DokomoData.direct;
+      indirect = DokomoData.indirect;
     }
 
-    Ferdium.setBadge(direct, indirect);
+    Dokomo.setBadge(direct, indirect);
   }
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
-  Ferdium.loop(getMessages);
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.loop(getMessages);
 };

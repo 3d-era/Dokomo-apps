@@ -3,7 +3,7 @@
   "name": "Nextcloud Cospend",
   "version": "1.3.1",
   "license": "MIT",
-  "repository": "https://github.com/csolisr/ferdium-recipes/tree/master/recipes/nextcloud-cospend/",
+  "repository": "https://github.com/csolisr/dokomo-recipes/tree/master/recipes/nextcloud-cospend/",
   "config": {
     "hasNotificationSound": true,
     "hasIndirectMessages": true,

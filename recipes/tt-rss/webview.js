@@ -4,9 +4,9 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const _notificationCategory = new URL(window.location.href).searchParams.get(
-    'ferdiumNotificationCategory',
+    'dokomoNotificationCategory',
   );
 
   const countMessagesUnderCategory = notificationCategory => {
@@ -16,24 +16,24 @@ module.exports = Ferdium => {
     for (const element of elements) {
       const label = element.querySelectorAll('.dijitTreeLabel')[0];
       const unreadNode = element.querySelectorAll('.unread')[0];
-      const unreadAmount = Ferdium.safeParseInt(unreadNode.textContent);
+      const unreadAmount = Dokomo.safeParseInt(unreadNode.textContent);
       if (label.textContent === notificationCategory) {
         directMessages += unreadAmount;
       } else {
         indirectMessages += unreadAmount;
       }
     }
-    Ferdium.setBadge(directMessages, indirectMessages);
+    Dokomo.setBadge(directMessages, indirectMessages);
   };
 
   const _countMessagesFromTitle = () => {
     const match = document.title.match(/^\((\d+)\) Tiny Tiny RSS$/);
     const count = match !== null && match.length > 0 ? match[1] : 0;
-    return Ferdium.safeParseInt(count);
+    return Dokomo.safeParseInt(count);
   };
 
   const countMessages = () => {
-    Ferdium.setBadge(_countMessagesFromTitle());
+    Dokomo.setBadge(_countMessagesFromTitle());
   };
 
   const getMessages = function getMessages() {
@@ -48,7 +48,7 @@ module.exports = Ferdium => {
     getMessages();
   };
 
-  Ferdium.loop(loopFunc);
+  Dokomo.loop(loopFunc);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

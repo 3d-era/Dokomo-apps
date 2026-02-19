@@ -1,8 +1,8 @@
-module.exports = Ferdium =>
-  class Jira extends Ferdium {
+module.exports = Dokomo =>
+  class Jira extends Dokomo {
     overrideUserAgent() {
       return window.navigator.userAgent
-        .replaceAll(/(Ferdium|Electron)\/\S+ \([^)]+\)/g, '')
+        .replaceAll(/(Dokomo|Electron)\/\S+ \([^)]+\)/g, '')
         .trim();
     }
   };

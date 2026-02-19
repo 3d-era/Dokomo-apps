@@ -4,10 +4,10 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getInnerInt = selector => {
     const element = document.querySelector(selector);
-    return element && Ferdium.safeParseInt(element.textContent);
+    return element && Dokomo.safeParseInt(element.textContent);
   };
 
   const getMessages = () => {
@@ -16,10 +16,10 @@ module.exports = Ferdium => {
       getInnerInt('a.has-notifs div.notif-count') ||
       0;
 
-    Ferdium.setBadge(direct);
+    Dokomo.setBadge(direct);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

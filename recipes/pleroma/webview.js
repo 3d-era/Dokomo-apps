@@ -142,30 +142,30 @@ class LogoUpdater {
   }
 }
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     let directCount = 0;
     const matchArr = document.title.match(titleRegex);
     if (matchArr) {
-      directCount = Ferdium.safeParseInt(matchArr[1]);
+      directCount = Dokomo.safeParseInt(matchArr[1]);
     }
-    Ferdium.setBadge(directCount);
+    Dokomo.setBadge(directCount);
   };
 
   getInstanceLogo().then(
     ({ logo, logoMask }) => {
       const updater = new LogoUpdater(logo, logoMask);
-      Ferdium.loop(() => {
+      Dokomo.loop(() => {
         getMessages();
         if (updater.update()) {
-          Ferdium.setAvatarImage(updater.toDataURL());
+          Dokomo.setAvatarImage(updater.toDataURL());
         }
       });
     },
     error => {
       // eslint-disable-next-line no-console
       console.log('Failed to load instance logo', error);
-      Ferdium.loop(getMessages);
+      Dokomo.loop(getMessages);
     },
   );
 };

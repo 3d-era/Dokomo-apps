@@ -10,17 +10,17 @@ setInterval(() => {
   document.querySelector('.i0EQd').style.maxWidth = 'unset !important';
 }, 3000);
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const element = document.querySelector('a[href^="/direct/inbox"] span');
-    Ferdium.setBadge(
+    Dokomo.setBadge(
       element && element.textContent
-        ? Ferdium.safeParseInt(element.textContent)
+        ? Dokomo.safeParseInt(element.textContent)
         : 0,
     );
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

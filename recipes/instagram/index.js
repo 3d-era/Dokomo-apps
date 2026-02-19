@@ -1,8 +1,8 @@
-module.exports = Ferdium =>
-  class Instagram extends Ferdium {
+module.exports = Dokomo =>
+  class Instagram extends Dokomo {
     overrideUserAgent() {
       return window.navigator.userAgent
-        .replaceAll(/(Ferdium|Electron)\/\S+ \([^)]+\)/g, '')
+        .replaceAll(/(Dokomo|Electron)\/\S+ \([^)]+\)/g, '')
         .trim();
     }
   };

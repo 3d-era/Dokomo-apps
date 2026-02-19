@@ -1,3 +1,3 @@
-// just pass through ferdium
+// just pass through dokomo
 
-module.exports = Ferdium => Ferdium;
+module.exports = Dokomo => Dokomo;

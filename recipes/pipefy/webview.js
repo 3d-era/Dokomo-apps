@@ -4,16 +4,16 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const getNotificationButton = document.querySelector(
       '#notifications_button',
     );
     const hasNotification =
       getNotificationButton.classList.contains('pp-active');
-    Ferdium.setBadge(0, hasNotification ? 1 : 0);
+    Dokomo.setBadge(0, hasNotification ? 1 : 0);
   };
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

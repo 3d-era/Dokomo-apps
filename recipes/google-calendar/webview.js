@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   // if the user is on googlecalendar landing page, go to the login page.
   if (
     location.hostname === 'workspace.google.com' &&
@@ -14,15 +14,15 @@ module.exports = Ferdium => {
       'https://accounts.google.com/AccountChooser?continue=https://calendar.google.com/u/0/';
   }
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
-  Ferdium.injectCSS(
-    'https://cdn.statically.io/gh/ferdium/ferdium-recipes/main/recipes/google-calendar/calendar.css',
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(
+    'https://cdn.statically.io/gh/dokomo/dokomo-recipes/main/recipes/google-calendar/calendar.css',
   );
-  Ferdium.injectJSUnsafe(
-    'https://cdn.statically.io/gh/ferdium/ferdium-recipes/main/recipes/google-calendar/webview-unsave.js',
+  Dokomo.injectJSUnsafe(
+    'https://cdn.statically.io/gh/dokomo/dokomo-recipes/main/recipes/google-calendar/webview-unsave.js',
   );
 
-  Ferdium.handleDarkMode(isEnabled => {
+  Dokomo.handleDarkMode(isEnabled => {
     const cssId = 'cssDarkModeWorkaround';
 
     if (isEnabled) {
@@ -34,7 +34,7 @@ module.exports = Ferdium => {
         link.rel = 'stylesheet';
         link.type = 'text/css';
         link.href =
-          'https://cdn.statically.io/gh/ferdium/ferdium-recipes/main/recipes/google-calendar/darkmode.css';
+          'https://cdn.statically.io/gh/dokomo/dokomo-recipes/main/recipes/google-calendar/darkmode.css';
         link.media = 'all';
         head.append(link);
       }

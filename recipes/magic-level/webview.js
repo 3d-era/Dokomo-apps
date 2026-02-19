@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     let countImportant = 0;
     let countNonImportant = 0;
@@ -20,11 +20,11 @@ module.exports = Ferdium => {
             if (unreadCount.includes(':')) {
               const counts = unreadCount
                 .split(':')
-                .map(s => Ferdium.safeParseInt(s.replaceAll(/[^\p{N}]/gu, '')));
+                .map(s => Dokomo.safeParseInt(s.replaceAll(/[^\p{N}]/gu, '')));
               countImportant = counts[0];
               countNonImportant = counts[1] - counts[0];
             } else {
-              countImportant = Ferdium.safeParseInt(
+              countImportant = Dokomo.safeParseInt(
                 unreadCount.replaceAll(/[^\p{N}]/gu, ''),
               );
             }
@@ -32,10 +32,10 @@ module.exports = Ferdium => {
         }
       }
     }
-    Ferdium.setBadge(countImportant, countNonImportant);
+    Dokomo.setBadge(countImportant, countNonImportant);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

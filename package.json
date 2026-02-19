@@ -1,5 +1,5 @@
 {
-  "name": "ferdium-recipes",
+  "name": "dokomo-recipes",
   "version": "1.0.1",
   "directories": {
     "doc": "docs"
@@ -27,18 +27,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ferdium/ferdium-recipes.git"
+    "url": "git+https://github.com/dokomo/dokomo-recipes.git"
   },
   "keywords": [
-    "ferdium",
+    "dokomo",
     "recipes"
   ],
-  "author": "Ferdium Contributors",
+  "author": "Dokomo Contributors",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ferdium/ferdium-recipes/issues"
+    "url": "https://github.com/dokomo/dokomo-recipes/issues"
   },
-  "homepage": "https://github.com/ferdium/ferdium-recipes",
+  "homepage": "https://github.com/dokomo/dokomo-recipes",
   "devDependencies": {
     "@types/targz": "1.0.4",
     "all-contributors-cli": "6.26.1",

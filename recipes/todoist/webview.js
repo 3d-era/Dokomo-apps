@@ -4,7 +4,7 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   function getTasks() {
     let todayCount = 0;
     let inboxCount = 0;
@@ -16,17 +16,17 @@ module.exports = Ferdium => {
     );
 
     if (todayElement) {
-      todayCount = Ferdium.safeParseInt(todayElement.textContent);
+      todayCount = Dokomo.safeParseInt(todayElement.textContent);
     }
 
     if (inboxElement) {
-      inboxCount = Ferdium.safeParseInt(inboxElement.textContent);
+      inboxCount = Dokomo.safeParseInt(inboxElement.textContent);
     }
 
-    Ferdium.setBadge(inboxCount, todayCount);
+    Dokomo.setBadge(inboxCount, todayCount);
   }
 
-  Ferdium.loop(getTasks);
+  Dokomo.loop(getTasks);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

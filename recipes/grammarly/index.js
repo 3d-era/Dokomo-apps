@@ -1,5 +1,5 @@
-module.exports = Ferdium =>
-  class Grammarly extends Ferdium {
+module.exports = Dokomo =>
+  class Grammarly extends Dokomo {
     async validateUrl() {
       return true;
     }

@@ -4,17 +4,17 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const calculateTotalDirectMessages = () =>
     [...document.querySelectorAll('.chats-list-element')]
       .map(el =>
-        Ferdium.safeParseInt(
+        Dokomo.safeParseInt(
           el.querySelector('.m-indicator .number').textContent,
         ),
       )
       .reduce((curr, prev) => curr + prev, 0);
 
-  Ferdium.loop(() => Ferdium.setBadge(calculateTotalDirectMessages()));
+  Dokomo.loop(() => Dokomo.setBadge(calculateTotalDirectMessages()));
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

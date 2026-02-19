@@ -4,19 +4,19 @@ function _interopRequireDefault(obj) {
 
 const _path = _interopRequireDefault(require('path'));
 
-module.exports = Ferdium => {
+module.exports = Dokomo => {
   const getMessages = () => {
     const ele = document.querySelectorAll(
       '.larkc-badge-count.navbarMenu-badge',
     );
     if (ele.length === 0) {
-      Ferdium.setBadge(0);
+      Dokomo.setBadge(0);
       return;
     }
-    Ferdium.setBadge(ele[0].textContent);
+    Dokomo.setBadge(ele[0].textContent);
   };
 
-  Ferdium.loop(getMessages);
+  Dokomo.loop(getMessages);
 
-  Ferdium.injectCSS(_path.default.join(__dirname, 'service.css'));
+  Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
 };
