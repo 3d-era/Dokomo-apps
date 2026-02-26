@@ -1,5 +1,3 @@
-/* Copied from: https://github.com/ducfilan/Dark-mode-Franz-Ferdi */
-
 :root:not(#z) {
   --bshadow: 0 2px 4px var(--shadow);
   --t: transparent !important;

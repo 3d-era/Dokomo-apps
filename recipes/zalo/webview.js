@@ -8,51 +8,39 @@ module.exports = Dokomo => {
   const getMessages = () => {
     let count = 0;
 
-    const unreadBadge = document
-      .querySelector('[data-translate-title="STR_TAB_MESSAGE"]')
-      .querySelector('[class*="leftbar-unread-badge"]');
-    if (unreadBadge !== null) {
-      const unreadBadgeFa = unreadBadge.querySelector('.z-noti-badge__content')
-        .classList[1];
-      switch (true) {
-        case unreadBadgeFa.match('fa-1') !== null: {
+    const unreadRed = document.querySelector('.unread-red');
+    if (unreadRed !== null) {
+      switch (unreadRed.classList[1]) {
+        case 'fa-num1': {
           count = 1;
           break;
         }
-        case unreadBadgeFa.match('fa-2') !== null: {
+        case 'fa-num2': {
           count = 2;
           break;
         }
-        case unreadBadgeFa.match('fa-3') !== null: {
+        case 'fa-num3': {
           count = 3;
           break;
         }
-        case unreadBadgeFa.match('fa-4') !== null: {
+        case 'fa-num4': {
           count = 4;
           break;
         }
-        case unreadBadgeFa.match('fa-5') !== null &&
-          unreadBadgeFa.match('fa-5_Plus') === null: {
+        case 'fa-num5': {
           count = 5;
           break;
         }
         default: {
-          // fa-5_Plus
+          // fa-num5plus
           const convUnread = document.querySelectorAll(
-            '.conv-action__unread-v2 > div:not([class*="--noti-disable"]',
+            '.conv-unread:not(.func-unread__muted)',
           );
-<<<<<<< HEAD
           if (convUnread.length === 0)
-=======
-          if (convUnread.length === 1)
->>>>>>> main
             count = 6; // 5+
           else
             for (const convUnreadItem of convUnread) {
-              switch (
-                convUnreadItem.querySelector('.z-noti-badge__content')
-                  .classList[1]
-              ) {
+              switch (convUnreadItem.classList[1]) {
                 case 'fa-1_24_Line': {
                   count += 1;
                   break;
