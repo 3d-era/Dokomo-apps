@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/3d-era/dokomo-recipes.git"
+    "url": "git+https://github.com/3d-era/dokomo-apps.git"
   },
   "keywords": [
     "dokomo",
@@ -40,6 +40,9 @@
     "url": "https://github.com/3d-era/dokomo-recipes/issues"
   },
   "homepage": "https://github.com/3d-era/dokomo-recipes",
+    "url": "https://github.com/3d-era/dokomo-apps/issues"
+  },
+  "homepage": "https://www.dokomo.app",
   "devDependencies": {
     "@types/targz": "1.0.4",
     "all-contributors-cli": "6.26.1",

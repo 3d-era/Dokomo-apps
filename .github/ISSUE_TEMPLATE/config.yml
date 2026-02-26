@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Frequently Asked Questions
-    url: https://dokomo.org/faq
-    about: The FAQ answers the most frequently asked questions on Dokomo
-  - name: "Bug or Recipe request: Main issue tracker"
-    url: https://github.com/dokomo/dokomo-app/issues
-    about: Please log any bug report or recipe request in the `dokomo-app` issue tracker, by selecting the category relevant to Recipes.

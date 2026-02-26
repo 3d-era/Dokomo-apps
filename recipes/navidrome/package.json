@@ -1,9 +1,0 @@
-{
-  "id": "navidrome",
-  "name": "Navidrome",
-  "version": "1.0.0",
-  "license": "MIT",
-  "config": {
-    "hasCustomUrl": true
-  }
-}

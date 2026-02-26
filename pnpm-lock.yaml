@@ -57,8 +57,6 @@ importers:
 
   recipes/TickTick: {}
 
-  recipes/affine: {}
-
   recipes/air-droid: {}
 
   recipes/airmessage: {}
@@ -78,8 +76,6 @@ importers:
   recipes/anydo: {}
 
   recipes/asana: {}
-
-  recipes/awork: {}
 
   recipes/azure-devops: {}
 
@@ -111,13 +107,9 @@ importers:
 
   recipes/brax.me: {}
 
-  recipes/bring: {}
-
   recipes/buffer: {}
 
   recipes/bugzilla: {}
-
-  recipes/bycs-messenger: {}
 
   recipes/campuswire: {}
 
@@ -125,11 +117,7 @@ importers:
 
   recipes/canvas: {}
 
-  recipes/cara: {}
-
   recipes/chatgpt: {}
-
-  recipes/chatllm: {}
 
   recipes/chatra: {}
 
@@ -161,17 +149,9 @@ importers:
 
   recipes/coinbase: {}
 
-  recipes/conceptboard: {}
-
   recipes/confluence: {}
 
   recipes/crowdin: {}
-
-  recipes/daily-dev: {}
-
-  recipes/deckblue: {}
-
-  recipes/deepai: {}
 
   recipes/deepl: {}
 
@@ -183,11 +163,7 @@ importers:
 
   recipes/devdocs: {}
 
-  recipes/diagrams: {}
-
   recipes/dialpad: {}
-
-  recipes/dict-cc: {}
 
   recipes/dingtalk: {}
 
@@ -207,23 +183,15 @@ importers:
 
   recipes/easy-redmine: {}
 
-  recipes/eitaa: {}
-
   recipes/element: {}
 
   recipes/elevate: {}
-
-  recipes/elk: {}
 
   recipes/epicgames: {}
 
   recipes/erepublik: {}
 
   recipes/evernote: {}
-
-  recipes/excalidraw: {}
-
-  recipes/exploit-db: {}
 
   recipes/facebook: {}
 
@@ -253,8 +221,6 @@ importers:
 
   recipes/flowdock: {}
 
-  recipes/follow-is: {}
-
   recipes/franz-custom-website: {}
 
   recipes/freshdesk: {}
@@ -262,8 +228,6 @@ importers:
   recipes/freshrss: {}
 
   recipes/freshservice: {}
-
-  recipes/furaffinity: {}
 
   recipes/gadugadu: {}
 
@@ -329,17 +293,11 @@ importers:
 
   recipes/grammarly: {}
 
-  recipes/grok: {}
-
   recipes/groupme: {}
 
   recipes/guilded: {}
 
-  recipes/guru: {}
-
   recipes/habitica: {}
-
-  recipes/hacker-news: {}
 
   recipes/hackmd: {}
 
@@ -348,8 +306,6 @@ importers:
   recipes/hangoutschat: {}
 
   recipes/harvest: {}
-
-  recipes/hastebin: {}
 
   recipes/help-scout: {}
 
@@ -360,8 +316,6 @@ importers:
   recipes/hostnet: {}
 
   recipes/hubstaff: {}
-
-  recipes/hugging-chat: {}
 
   recipes/iCloud: {}
 
@@ -375,10 +329,6 @@ importers:
 
   recipes/idobata: {}
 
-  recipes/infomaniak-calendar: {}
-
-  recipes/infomaniak-kdrive: {}
-
   recipes/infomaniak-mail: {}
 
   recipes/inoreader: {}
@@ -389,21 +339,15 @@ importers:
 
   recipes/intercom: {}
 
-  recipes/invoice-ninja: {}
-
   recipes/irccloud: {}
 
   recipes/iris-messenger: {}
-
-  recipes/it-tools: {}
 
   recipes/jira: {}
 
   recipes/jitsi: {}
 
   recipes/jollor: {}
-
-  recipes/jsoncrack: {}
 
   recipes/kaizala: {}
 
@@ -415,8 +359,6 @@ importers:
 
   recipes/kiwiirc: {}
 
-  recipes/ko-fi: {}
-
   recipes/lark: {}
 
   recipes/lastpass: {}
@@ -425,13 +367,7 @@ importers:
 
   recipes/linear: {}
 
-  recipes/lineworks: {}
-
   recipes/linkedin: {}
-
-  recipes/lobe-chat: {}
-
-  recipes/localazy: {}
 
   recipes/magic-level: {}
 
@@ -439,19 +375,13 @@ importers:
 
   recipes/mailfence: {}
 
-  recipes/mastodeck: {}
-
   recipes/mastodon: {}
 
   recipes/mattermost: {}
 
-  recipes/mdaemon: {}
-
   recipes/medium: {}
 
   recipes/meetup: {}
-
-  recipes/memos: {}
 
   recipes/messenger: {}
 
@@ -459,25 +389,7 @@ importers:
 
   recipes/mewe: {}
 
-  recipes/mightytext: {}
-
-  recipes/miniflux: {}
-
-  recipes/miro: {}
-
-  recipes/mirotalk-bro: {}
-
-  recipes/mirotalk-c2c: {}
-
-  recipes/mirotalk-p2p: {}
-
-  recipes/mirotalk-sfu: {}
-
-  recipes/mirotalk-webrtc: {}
-
   recipes/misskey: {}
-
-  recipes/mistral: {}
 
   recipes/monday: {}
 
@@ -485,15 +397,11 @@ importers:
 
   recipes/moodle: {}
 
-  recipes/ms-planner: {}
-
   recipes/msteams: {}
 
   recipes/mstodo: {}
 
   recipes/mysms: {}
-
-  recipes/navidrome: {}
 
   recipes/netatmo-energy: {}
 
@@ -521,11 +429,7 @@ importers:
 
   recipes/nomadlist: {}
 
-  recipes/nostr: {}
-
   recipes/notion: {}
-
-  recipes/notion-calendar: {}
 
   recipes/ntfy: {}
 
@@ -539,11 +443,7 @@ importers:
 
   recipes/onenote: {}
 
-  recipes/online-go: {}
-
   recipes/onmail: {}
-
-  recipes/open-webui: {}
 
   recipes/oreilly-learning: {}
 
@@ -575,8 +475,6 @@ importers:
 
   recipes/pixelfed: {}
 
-  recipes/pixieset: {}
-
   recipes/plan: {}
 
   recipes/planitpoker: {}
@@ -601,11 +499,7 @@ importers:
 
   recipes/posteo: {}
 
-  recipes/postman: {}
-
   recipes/producthunt: {}
-
-  recipes/productive: {}
 
   recipes/proton-calendar: {}
 
@@ -619,13 +513,9 @@ importers:
 
   recipes/pulse-sms: {}
 
-  recipes/purelymail: {}
-
   recipes/pushbullet: {}
 
   recipes/pushover: {}
-
-  recipes/quora: {}
 
   recipes/rainloop: {}
 
@@ -649,11 +539,7 @@ importers:
 
   recipes/rocketchat: {}
 
-  recipes/romeo: {}
-
   recipes/roundcube: {}
-
-  recipes/rydoo: {}
 
   recipes/schildichat: {}
 
@@ -662,8 +548,6 @@ importers:
   recipes/scrumpy: {}
 
   recipes/sendtask: {}
-
-  recipes/sharezone: {}
 
   recipes/shopee: {}
 
@@ -691,14 +575,6 @@ importers:
 
   recipes/sococo: {}
 
-  recipes/sogo: {}
-
-  recipes/somtoday: {}
-
-  recipes/sonarqube: {}
-
-  recipes/spikenow: {}
-
   recipes/stackexchange: {}
 
   recipes/stackoverflow: {}
@@ -707,19 +583,11 @@ importers:
 
   recipes/standardnotes: {}
 
-  recipes/statuzer: {}
-
   recipes/steamchat: {}
-
-  recipes/strava: {}
 
   recipes/stride: {}
 
   recipes/superhuman: {}
-
-  recipes/superlist: {}
-
-  recipes/sympatia: {}
 
   recipes/sync: {}
 
@@ -739,11 +607,7 @@ importers:
 
   recipes/teamwork-projects: {}
 
-  recipes/techmeme: {}
-
   recipes/telegram: {}
-
-  recipes/temp-mail: {}
 
   recipes/thelounge: {}
 
@@ -765,15 +629,9 @@ importers:
 
   recipes/toggl: {}
 
-  recipes/traccar: {}
-
   recipes/trakt: {}
 
   recipes/trello: {}
-
-  recipes/trilium: {}
-
-  recipes/truelancer: {}
 
   recipes/tt-rss: {}
 
@@ -793,17 +651,9 @@ importers:
 
   recipes/unraid: {}
 
-  recipes/upwork: {}
-
-  recipes/viva-engage: {}
-
   recipes/vk: {}
 
-  recipes/voetbal-nl: {}
-
   recipes/voxer: {}
-
-  recipes/wakapi: {}
 
   recipes/wakatime: {}
 

@@ -16,7 +16,7 @@ const pkgVersionChangedMatcher = /\n\+.*version.*/;
 
 // Publicly availible link to this repository's recipe folder
 // Used for generating public icon URLs
-const repo = 'https://cdn.jsdelivr.net/gh/dokomo/dokomo-recipes@main/recipes/';
+const repo = 'https://cdn.jsdelivr.net/gh/3d-era/dokomo-apps/recipes/';
 
 // Helper: Compress src folder into dest file
 const compress = (src, dest) =>

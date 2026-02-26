@@ -19,7 +19,7 @@ on:
 
 jobs:
   build:
-    name: Dokomo Recipes Build
+    name: Ferdium Recipes Build
     runs-on: ubuntu-24.04
     steps:
       - name: Print latest commit
