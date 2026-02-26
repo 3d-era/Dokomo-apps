@@ -3,6 +3,7 @@
   "name": "Nextcloud Talk",
   "version": "1.4.2",
   "license": "MIT",
+  "repository": "https://github.com/csolisr/dokomo-recipes/tree/master/recipes/nextcloud-tasks/",
   "config": {
     "hasNotificationSound": true,
     "hasIndirectMessages": true,

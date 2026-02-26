@@ -1,7 +1,7 @@
 {
   "id": "zalo-oa",
   "name": "Zalo OA",
-  "version": "1.2.0",
+  "version": "1.1.1",
   "license": "MIT",
   "config": {
     "serviceURL": "https://oa.zalo.me/manage/oa"

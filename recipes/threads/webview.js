@@ -50,6 +50,7 @@ module.exports = (Dokomo, settings) => {
 
   Dokomo.loop(getMessages);
 
+  // https://github.com/dokomo/dokomo-recipes/blob/9d715597a600710c20f75412d3dcd8cdb7b3c39e/docs/frontend_api.md#usage-4
   // Helper that activates DarkReader and injects your darkmode.css at the same time
   Dokomo.handleDarkMode(isEnabled => {
     const url = new URL(window.location.href);
