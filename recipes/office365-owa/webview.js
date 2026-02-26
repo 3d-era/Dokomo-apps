@@ -21,6 +21,40 @@ module.exports = (Dokomo, settings) => {
     return unreadCount;
   };
 
+  // adapted from the franz-custom-website recipe, for opening
+  // links according to  the user's preference (Dokomo/ext.browser)
+  document.addEventListener(
+    'click',
+    event => {
+      const link = event.target.closest('a');
+      const button = event.target.closest('button');
+
+      if (link || button) {
+        const url = link
+          ? link.getAttribute('href')
+          : button.getAttribute('title');
+
+        // check if the URL is relative or absolute
+        if (url.startsWith('/')) {
+          return;
+        }
+
+        // check if we have a valid URL that is not a script nor an image:
+        if (url && url !== '#' && !Dokomo.isImage(link)) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          if (settings.trapLinkClicks === true) {
+            window.location.href = url;
+          } else {
+            Dokomo.openNewWindow(url);
+          }
+        }
+      }
+    },
+    true,
+  );
+
   const getMessages = () => {
     let directUnreadCount = 0;
     let indirectUnreadCount = 0;

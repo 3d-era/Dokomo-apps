@@ -94,6 +94,11 @@ const pascalCasedName = toPascalCase(recipe); // PascalCased recipe ID only cont
 
 What's next?
 - Make sure you restart Dokomo in order for the recipe to show up
+<<<<<<< HEAD
 - Customise "webview.js", "package.json" and "icon.svg" (see https://github.com/ferdium/ferdium-recipes/blob/main/docs/integration.md#recipe-structure)
 - Publish your recipe (see https://github.com/ferdium/ferdium-recipes/blob/main/docs/integration.md#publishing)`);
+=======
+- Customise "webview.js", "package.json" and "icon.svg" (see https://github.com/dokomo/dokomo-recipes/blob/main/docs/integration.md#recipe-structure)
+- Publish your recipe (see https://github.com/dokomo/dokomo-recipes/blob/main/docs/integration.md#publishing)`);
+>>>>>>> main
 })();

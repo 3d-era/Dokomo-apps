@@ -6,6 +6,7 @@
     "doc": "docs"
   },
   "engines": {
+<<<<<<< HEAD
     "node": "22.14.0",
     "pnpm": "10.4.0"
   },
@@ -15,6 +16,17 @@
   },
   "engine-strict": true,
   "packageManager": "pnpm@10.4.0",
+=======
+    "node": "22.18.0",
+    "pnpm": "10.14.0"
+  },
+  "volta": {
+    "node": "22.18.0",
+    "pnpm": "10.14.0"
+  },
+  "engine-strict": true,
+  "packageManager": "pnpm@10.14.0",
+>>>>>>> main
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "is-ci || husky install",
@@ -28,7 +40,11 @@
   },
   "repository": {
     "type": "git",
+<<<<<<< HEAD
     "url": "git+https://github.com/3d-era/dokomo-apps.git"
+=======
+    "url": "git+https://github.com/3d-era/dokomo-recipes.git"
+>>>>>>> main
   },
   "keywords": [
     "dokomo",
@@ -37,9 +53,15 @@
   "author": "Dokomo Contributors",
   "license": "MIT",
   "bugs": {
+<<<<<<< HEAD
     "url": "https://github.com/3d-era/dokomo-apps/issues"
   },
   "homepage": "https://www.dokomo.app",
+=======
+    "url": "https://github.com/3d-era/dokomo-recipes/issues"
+  },
+  "homepage": "https://github.com/3d-era/dokomo-recipes",
+>>>>>>> main
   "devDependencies": {
     "@types/targz": "1.0.4",
     "all-contributors-cli": "6.26.1",

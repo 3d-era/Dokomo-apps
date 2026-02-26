@@ -11,13 +11,9 @@ server*.log
 *.bmp
 *.zwc*
 /all.json
-
 /temp
-
+/docs
 CODE_OF_CONDUCT.md
-
 *.md
-
 .github/
-
 _Unused/

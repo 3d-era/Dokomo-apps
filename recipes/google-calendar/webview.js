@@ -16,10 +16,17 @@ module.exports = Dokomo => {
 
   Dokomo.injectCSS(_path.default.join(__dirname, 'service.css'));
   Dokomo.injectCSS(
+<<<<<<< HEAD
     'https://cdn.jsdelivr.net/gh/3d-era/dokomo-apps/recipes/google-calendar/calendar.css',
   );
   Dokomo.injectJSUnsafe(
     'https://cdn.jsdelivr.net/gh/3d-era/dokomo-apps/recipes/google-calendar/webview-unsave.js',
+=======
+    'https://cdn.statically.io/gh/3d-era/dokomo-recipes/main/recipes/google-calendar/calendar.css',
+  );
+  Dokomo.injectJSUnsafe(
+    'https://cdn.statically.io/gh/3d-era/dokomo-recipes/main/recipes/google-calendar/webview-unsave.js',
+>>>>>>> main
   );
 
   Dokomo.handleDarkMode(isEnabled => {
@@ -34,7 +41,11 @@ module.exports = Dokomo => {
         link.rel = 'stylesheet';
         link.type = 'text/css';
         link.href =
+<<<<<<< HEAD
           'https://cdn.jsdelivr.net/gh/3d-era/dokomo-apps/recipes/google-calendar/darkmode.css';
+=======
+          'https://cdn.statically.io/gh/3d-era/dokomo-recipes/main/recipes/google-calendar/darkmode.css';
+>>>>>>> main
         link.media = 'all';
         head.append(link);
       }

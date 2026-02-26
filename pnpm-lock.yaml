@@ -47,6 +47,11 @@ importers:
 
   recipes/1password: {}
 
+<<<<<<< HEAD
+=======
+  recipes/80lv: {}
+
+>>>>>>> main
   recipes/BlueBubbles: {}
 
   recipes/NewsBlur: {}
@@ -54,6 +59,8 @@ importers:
   recipes/OVHCloud: {}
 
   recipes/TickTick: {}
+
+  recipes/affine: {}
 
   recipes/air-droid: {}
 
@@ -75,10 +82,21 @@ importers:
 
   recipes/asana: {}
 
+  recipes/awork: {}
+
   recipes/azure-devops: {}
 
   recipes/azure-portal: {}
 
+<<<<<<< HEAD
+=======
+  recipes/badoo: {}
+
+  recipes/bale: {}
+
+  recipes/bard: {}
+
+>>>>>>> main
   recipes/basecamp: {}
 
   recipes/bigbluebutton: {}
@@ -99,9 +117,13 @@ importers:
 
   recipes/brax.me: {}
 
+  recipes/bring: {}
+
   recipes/buffer: {}
 
   recipes/bugzilla: {}
+
+  recipes/bycs-messenger: {}
 
   recipes/campuswire: {}
 
@@ -109,7 +131,11 @@ importers:
 
   recipes/canvas: {}
 
+  recipes/cara: {}
+
   recipes/chatgpt: {}
+
+  recipes/chatllm: {}
 
   recipes/chatra: {}
 
@@ -141,9 +167,17 @@ importers:
 
   recipes/coinbase: {}
 
+  recipes/conceptboard: {}
+
   recipes/confluence: {}
 
   recipes/crowdin: {}
+
+  recipes/daily-dev: {}
+
+  recipes/deckblue: {}
+
+  recipes/deepai: {}
 
   recipes/deepl: {}
 
@@ -155,7 +189,11 @@ importers:
 
   recipes/devdocs: {}
 
+  recipes/diagrams: {}
+
   recipes/dialpad: {}
+
+  recipes/dict-cc: {}
 
   recipes/dingtalk: {}
 
@@ -175,15 +213,23 @@ importers:
 
   recipes/easy-redmine: {}
 
+  recipes/eitaa: {}
+
   recipes/element: {}
 
   recipes/elevate: {}
+
+  recipes/elk: {}
 
   recipes/epicgames: {}
 
   recipes/erepublik: {}
 
   recipes/evernote: {}
+
+  recipes/excalidraw: {}
+
+  recipes/exploit-db: {}
 
   recipes/facebook: {}
 
@@ -213,6 +259,8 @@ importers:
 
   recipes/flowdock: {}
 
+  recipes/follow-is: {}
+
   recipes/franz-custom-website: {}
 
   recipes/freshdesk: {}
@@ -220,6 +268,8 @@ importers:
   recipes/freshrss: {}
 
   recipes/freshservice: {}
+
+  recipes/furaffinity: {}
 
   recipes/gadugadu: {}
 
@@ -285,11 +335,17 @@ importers:
 
   recipes/grammarly: {}
 
+  recipes/grok: {}
+
   recipes/groupme: {}
 
   recipes/guilded: {}
 
+  recipes/guru: {}
+
   recipes/habitica: {}
+
+  recipes/hacker-news: {}
 
   recipes/hackmd: {}
 
@@ -298,6 +354,8 @@ importers:
   recipes/hangoutschat: {}
 
   recipes/harvest: {}
+
+  recipes/hastebin: {}
 
   recipes/help-scout: {}
 
@@ -308,6 +366,8 @@ importers:
   recipes/hostnet: {}
 
   recipes/hubstaff: {}
+
+  recipes/hugging-chat: {}
 
   recipes/iCloud: {}
 
@@ -321,6 +381,10 @@ importers:
 
   recipes/idobata: {}
 
+  recipes/infomaniak-calendar: {}
+
+  recipes/infomaniak-kdrive: {}
+
   recipes/infomaniak-mail: {}
 
   recipes/inoreader: {}
@@ -331,15 +395,21 @@ importers:
 
   recipes/intercom: {}
 
+  recipes/invoice-ninja: {}
+
   recipes/irccloud: {}
 
   recipes/iris-messenger: {}
+
+  recipes/it-tools: {}
 
   recipes/jira: {}
 
   recipes/jitsi: {}
 
   recipes/jollor: {}
+
+  recipes/jsoncrack: {}
 
   recipes/kaizala: {}
 
@@ -351,6 +421,8 @@ importers:
 
   recipes/kiwiirc: {}
 
+  recipes/ko-fi: {}
+
   recipes/lark: {}
 
   recipes/lastpass: {}
@@ -359,7 +431,13 @@ importers:
 
   recipes/linear: {}
 
+  recipes/lineworks: {}
+
   recipes/linkedin: {}
+
+  recipes/lobe-chat: {}
+
+  recipes/localazy: {}
 
   recipes/magic-level: {}
 
@@ -367,13 +445,19 @@ importers:
 
   recipes/mailfence: {}
 
+  recipes/mastodeck: {}
+
   recipes/mastodon: {}
 
   recipes/mattermost: {}
 
+  recipes/mdaemon: {}
+
   recipes/medium: {}
 
   recipes/meetup: {}
+
+  recipes/memos: {}
 
   recipes/messenger: {}
 
@@ -381,7 +465,25 @@ importers:
 
   recipes/mewe: {}
 
+  recipes/mightytext: {}
+
+  recipes/miniflux: {}
+
+  recipes/miro: {}
+
+  recipes/mirotalk-bro: {}
+
+  recipes/mirotalk-c2c: {}
+
+  recipes/mirotalk-p2p: {}
+
+  recipes/mirotalk-sfu: {}
+
+  recipes/mirotalk-webrtc: {}
+
   recipes/misskey: {}
+
+  recipes/mistral: {}
 
   recipes/monday: {}
 
@@ -389,11 +491,15 @@ importers:
 
   recipes/moodle: {}
 
+  recipes/ms-planner: {}
+
   recipes/msteams: {}
 
   recipes/mstodo: {}
 
   recipes/mysms: {}
+
+  recipes/navidrome: {}
 
   recipes/netatmo-energy: {}
 
@@ -421,7 +527,11 @@ importers:
 
   recipes/nomadlist: {}
 
+  recipes/nostr: {}
+
   recipes/notion: {}
+
+  recipes/notion-calendar: {}
 
   recipes/ntfy: {}
 
@@ -435,12 +545,23 @@ importers:
 
   recipes/onenote: {}
 
+  recipes/online-go: {}
+
   recipes/onmail: {}
+
+  recipes/open-webui: {}
 
   recipes/oreilly-learning: {}
 
   recipes/outreach: {}
 
+<<<<<<< HEAD
+=======
+  recipes/paperless-ngx: {}
+
+  recipes/parro: {}
+
+>>>>>>> main
   recipes/pastebin: {}
 
   recipes/patreon: {}
@@ -453,6 +574,11 @@ importers:
 
   recipes/perplexity: {}
 
+<<<<<<< HEAD
+=======
+  recipes/phanpy: {}
+
+>>>>>>> main
   recipes/pinterest: {}
 
   recipes/pipefy: {}
@@ -460,6 +586,8 @@ importers:
   recipes/pivotal-tracker: {}
 
   recipes/pixelfed: {}
+
+  recipes/pixieset: {}
 
   recipes/plan: {}
 
@@ -485,7 +613,11 @@ importers:
 
   recipes/posteo: {}
 
+  recipes/postman: {}
+
   recipes/producthunt: {}
+
+  recipes/productive: {}
 
   recipes/proton-calendar: {}
 
@@ -499,9 +631,13 @@ importers:
 
   recipes/pulse-sms: {}
 
+  recipes/purelymail: {}
+
   recipes/pushbullet: {}
 
   recipes/pushover: {}
+
+  recipes/quora: {}
 
   recipes/rainloop: {}
 
@@ -513,6 +649,13 @@ importers:
 
   recipes/regex101: {}
 
+<<<<<<< HEAD
+=======
+  recipes/replit: {}
+
+  recipes/revolt: {}
+
+>>>>>>> main
   recipes/ring-central: {}
 
   recipes/riseup: {}
@@ -521,7 +664,11 @@ importers:
 
   recipes/rocketchat: {}
 
+  recipes/romeo: {}
+
   recipes/roundcube: {}
+
+  recipes/rydoo: {}
 
   recipes/schildichat: {}
 
@@ -530,6 +677,8 @@ importers:
   recipes/scrumpy: {}
 
   recipes/sendtask: {}
+
+  recipes/sharezone: {}
 
   recipes/shopee: {}
 
@@ -557,6 +706,14 @@ importers:
 
   recipes/sococo: {}
 
+  recipes/sogo: {}
+
+  recipes/somtoday: {}
+
+  recipes/sonarqube: {}
+
+  recipes/spikenow: {}
+
   recipes/stackexchange: {}
 
   recipes/stackoverflow: {}
@@ -565,16 +722,33 @@ importers:
 
   recipes/standardnotes: {}
 
+  recipes/statuzer: {}
+
   recipes/steamchat: {}
+
+  recipes/strava: {}
 
   recipes/stride: {}
 
   recipes/superhuman: {}
 
+  recipes/superlist: {}
+
+  recipes/sympatia: {}
+
   recipes/sync: {}
+
+<<<<<<< HEAD
+  recipes/taiga: {}
+
+=======
+  recipes/synology-chat: {}
 
   recipes/taiga: {}
 
+  recipes/talkspirit: {}
+
+>>>>>>> main
   recipes/tawk: {}
 
   recipes/tchap: {}
@@ -585,7 +759,11 @@ importers:
 
   recipes/teamwork-projects: {}
 
+  recipes/techmeme: {}
+
   recipes/telegram: {}
+
+  recipes/temp-mail: {}
 
   recipes/thelounge: {}
 
@@ -607,9 +785,15 @@ importers:
 
   recipes/toggl: {}
 
+  recipes/traccar: {}
+
   recipes/trakt: {}
 
   recipes/trello: {}
+
+  recipes/trilium: {}
+
+  recipes/truelancer: {}
 
   recipes/tt-rss: {}
 
@@ -629,9 +813,17 @@ importers:
 
   recipes/unraid: {}
 
+  recipes/upwork: {}
+
+  recipes/viva-engage: {}
+
   recipes/vk: {}
 
+  recipes/voetbal-nl: {}
+
   recipes/voxer: {}
+
+  recipes/wakapi: {}
 
   recipes/wakatime: {}
 
@@ -699,8 +891,17 @@ importers:
 
 packages:
 
+<<<<<<< HEAD
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
+=======
+  '@aashutoshrathi/word-wrap@1.2.6':
+    resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
+    engines: {node: '>=0.10.0'}
+
+  '@babel/code-frame@7.22.5':
+    resolution: {integrity: sha512-Xmwn266vad+6DAqEB2A6V/CcZVp62BbwVmcOJc2RPuwih1kw02TjQvWVWlcKGbBPd+8/0V5DEkOcizRGYsspYQ==}
+>>>>>>> main
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.27.1':
@@ -711,14 +912,28 @@ packages:
     resolution: {integrity: sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==}
     engines: {node: '>=6.9.0'}
 
+<<<<<<< HEAD
   '@eslint-community/eslint-utils@4.7.0':
     resolution: {integrity: sha512-dyybb3AcajC7uha6CvhdVRJqaKyn7w2YKqKyAN37NKYgZT36w+iRb0Dymmc5qEJ549c/S31cMMSFd75bteCpCw==}
+=======
+  '@babel/runtime@7.21.5':
+    resolution: {integrity: sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==}
+    engines: {node: '>=6.9.0'}
+
+  '@eslint-community/eslint-utils@4.4.0':
+    resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
+>>>>>>> main
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
 
+<<<<<<< HEAD
   '@eslint-community/regexpp@4.12.1':
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
+=======
+  '@eslint-community/regexpp@4.6.1':
+    resolution: {integrity: sha512-O7x6dMstWLn2ktjcoiNLDkAGG2EjveHL+Vvc+n0fXumkJYAcSqcVYKtwDU+hDZ0uDUsnUagSYaZrOLAYE8un1A==}
+>>>>>>> main
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
   '@eslint/eslintrc@2.1.4':
@@ -1683,8 +1898,13 @@ snapshots:
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
+<<<<<<< HEAD
       '@humanwhocodes/object-schema': 2.0.3
       debug: 4.4.1
+=======
+      '@humanwhocodes/object-schema': 2.0.2
+      debug: 4.3.4
+>>>>>>> main
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -1816,7 +2036,17 @@ snapshots:
 
   camelcase@5.3.1: {}
 
+<<<<<<< HEAD
   caniuse-lite@1.0.30001718: {}
+=======
+  caniuse-lite@1.0.30001599: {}
+
+  chalk@2.4.2:
+    dependencies:
+      ansi-styles: 3.2.1
+      escape-string-regexp: 1.0.5
+      supports-color: 5.5.0
+>>>>>>> main
 
   chalk@4.1.2:
     dependencies:
@@ -1846,6 +2076,13 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
+<<<<<<< HEAD
+=======
+
+  color-convert@1.9.3:
+    dependencies:
+      color-name: 1.1.3
+>>>>>>> main
 
   color-convert@2.0.1:
     dependencies:
@@ -1861,15 +2098,29 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
+<<<<<<< HEAD
   cross-spawn@7.0.6:
+=======
+  cross-spawn@7.0.3:
+>>>>>>> main
     dependencies:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
 
+<<<<<<< HEAD
   debug@4.4.1:
     dependencies:
       ms: 2.1.3
+=======
+  debug@4.3.4:
+    dependencies:
+      ms: 2.1.2
+
+  debug@4.3.5:
+    dependencies:
+      ms: 2.1.2
+>>>>>>> main
 
   decamelize@1.2.0: {}
 
@@ -1917,10 +2168,17 @@ snapshots:
       clean-regexp: 1.0.0
       core-js-compat: 3.42.0
       eslint: 8.57.0
+<<<<<<< HEAD
       esquery: 1.6.0
       indent-string: 4.0.0
       is-builtin-module: 3.2.1
       jsesc: 3.1.0
+=======
+      esquery: 1.5.0
+      indent-string: 4.0.0
+      is-builtin-module: 3.2.1
+      jsesc: 3.0.2
+>>>>>>> main
       pluralize: 8.0.0
       read-pkg-up: 7.0.1
       regexp-tree: 0.1.27
@@ -1946,7 +2204,11 @@ snapshots:
       '@humanwhocodes/config-array': 0.11.14
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
+<<<<<<< HEAD
       '@ungap/structured-clone': 1.3.0
+=======
+      '@ungap/structured-clone': 1.2.0
+>>>>>>> main
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.6
@@ -1986,7 +2248,11 @@ snapshots:
       acorn-jsx: 5.3.2(acorn@8.14.1)
       eslint-visitor-keys: 3.4.3
 
+<<<<<<< HEAD
   esquery@1.6.0:
+=======
+  esquery@1.5.0:
+>>>>>>> main
     dependencies:
       estraverse: 5.3.0
 
@@ -2046,7 +2312,11 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
       jsonfile: 6.1.0
+<<<<<<< HEAD
       universalify: 2.0.1
+=======
+      universalify: 2.0.0
+>>>>>>> main
 
   fs.realpath@1.0.0: {}
 
@@ -2067,7 +2337,11 @@ snapshots:
       once: 1.4.0
       path-is-absolute: 1.0.1
 
+<<<<<<< HEAD
   globals@13.24.0:
+=======
+  globals@13.20.0:
+>>>>>>> main
     dependencies:
       type-fest: 0.20.2
 
@@ -2194,10 +2468,13 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
+<<<<<<< HEAD
 
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
+=======
+>>>>>>> main
 
   levn@0.4.1:
     dependencies:
@@ -2266,14 +2543,21 @@ snapshots:
       is-inside-container: 1.0.0
       is-wsl: 3.1.0
 
+<<<<<<< HEAD
   optionator@0.9.4:
+=======
+  optionator@0.9.3:
+>>>>>>> main
     dependencies:
       deep-is: 0.1.4
       fast-levenshtein: 2.0.6
       levn: 0.4.1
       prelude-ls: 1.2.1
       type-check: 0.4.0
+<<<<<<< HEAD
       word-wrap: 1.2.5
+=======
+>>>>>>> main
 
   os-tmpdir@1.0.2: {}
 
@@ -2357,7 +2641,11 @@ snapshots:
       parse-json: 5.2.0
       type-fest: 0.6.0
 
+<<<<<<< HEAD
   readable-stream@2.3.8:
+=======
+  readable-stream@2.3.7:
+>>>>>>> main
     dependencies:
       core-util-is: 1.0.3
       inherits: 2.0.4
@@ -2366,6 +2654,11 @@ snapshots:
       safe-buffer: 5.1.2
       string_decoder: 1.1.1
       util-deprecate: 1.0.2
+<<<<<<< HEAD
+=======
+
+  regenerator-runtime@0.13.11: {}
+>>>>>>> main
 
   regexp-tree@0.1.27: {}
 
@@ -2379,7 +2672,11 @@ snapshots:
 
   resolve-from@4.0.0: {}
 
+<<<<<<< HEAD
   resolve@1.22.10:
+=======
+  resolve@1.22.2:
+>>>>>>> main
     dependencies:
       is-core-module: 2.16.1
       path-parse: 1.0.7
@@ -2476,7 +2773,11 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+<<<<<<< HEAD
   tar-fs@1.16.4:
+=======
+  tar-fs@1.16.3:
+>>>>>>> main
     dependencies:
       chownr: 1.1.4
       mkdirp: 0.5.6

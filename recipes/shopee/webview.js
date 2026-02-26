@@ -15,7 +15,7 @@ module.exports = Dokomo => {
   Dokomo.loop(getMessages);
 
   waitForElm('#shopee-mini-chat-embedded').then(() => {
-    console.log('Element is ready');
+    // console.log('Element is ready');
     const head = document.querySelector('.FAQGyh');
     head.remove();
   });
@@ -39,6 +39,7 @@ module.exports = Dokomo => {
   }
 
   function waitForElm(selector) {
+    // eslint-disable-next-line consistent-return
     return new Promise(resolve => {
       if (document.querySelector(selector)) {
         return resolve(document.querySelector(selector));
