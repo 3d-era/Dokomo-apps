@@ -39,9 +39,6 @@
   "bugs": {
     "url": "https://github.com/3d-era/dokomo-recipes/issues"
   },
-  "homepage": "https://github.com/3d-era/dokomo-recipes",
-    "url": "https://github.com/3d-era/dokomo-apps/issues"
-  },
   "homepage": "https://www.dokomo.app",
   "devDependencies": {
     "@types/targz": "1.0.4",
