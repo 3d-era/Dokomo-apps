@@ -14,15 +14,15 @@
 <a href="#backers-via-opencollective"><img alt="Open Collective backers" src="https://img.shields.io/opencollective/backers/getferdi?logo=open-collective"></a>
 -->
 
-> 🍰 Recipes encapsulate your favourite apps into Ferdium for unified notifications handling and more
+> 🍰 Recipes encapsulate your favourite apps into Dokomo for unified notifications handling and more
 
-Recipes are small scripts that are responsible for providing the connection between your services (e.g. WhatsApp, Gmail or Slack) and Ferdium. It provides Ferdium information like the number of current notifications, handles enabling dark mode and may otherwise improve your experience with the service.
+Recipes are small scripts that are responsible for providing the connection between your services (e.g. WhatsApp, Gmail or Slack) and Dokomo. It provides Dokomo information like the number of current notifications, handles enabling dark mode and may otherwise improve your experience with the service.
 
 ## Creating, adding, and editing recipes
 
 **Important:** Please make sure to run `pnpm validate` before submitting.
 
-* [Overview / How to create a Ferdium integration](docs/integration.md)
+* [Overview / How to create a Dokomo integration](docs/integration.md)
 * [How to update/change recipes](docs/updating.md)
 * [Configuration (package.json)](docs/configuration.md)
 * [Frontend API (webview.js)](docs/frontend_api.md)

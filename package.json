@@ -1,5 +1,5 @@
 {
-  "name": "dokomo-recipes",
+  "name": "dokomo-app",
   "version": "1.0.1",
   "description": "Apps for Dokomo",
   "directories": {
@@ -37,7 +37,7 @@
   "author": "Dokomo Contributors",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/3d-era/dokomo-recipes/issues"
+    "url": "https://github.com/3d-era/dokomo-app/issues"
   },
   "homepage": "https://www.dokomo.app",
   "devDependencies": {

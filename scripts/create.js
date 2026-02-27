@@ -87,6 +87,6 @@ const pascalCasedName = toPascalCase(recipe); // PascalCased recipe ID only cont
 
 What's next?
 - Make sure you restart Dokomo in order for the recipe to show up
-- Customise "webview.js", "package.json" and "icon.svg" (see https://github.com/kj4team/dokomo-recipes/blob/main/docs/integration.md#recipe-structure)
-- Publish your recipe (see https://github.com/kj4team/dokomo-recipes/blob/main/docs/integration.md#publishing)`);
+- Customise "webview.js", "package.json" and "icon.svg" (see https://github.com/3d-era/dokomo-apps/blob/main/docs/integration.md#recipe-structure)
+- Publish your recipe (see https://github.com/3d-era/dokomo-apps/blob/main/docs/integration.md#publishing)`);
 })();

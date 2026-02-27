@@ -9,7 +9,7 @@ module.exports = Dokomo => {
     const count = document.querySelector(
       'a[data-test-folder-name="Inbox"] span[data-test-id="displayed-count"], [data-test-id="menu-list-item"]:has([aria-label="Inbox"]) [data-test-id="badge"] > span',
     ).textContent;
-    Ferdium.setBadge(count);
+    Dokomo.setBadge(count);
   };
 
   Dokomo.loop(getMessages);
