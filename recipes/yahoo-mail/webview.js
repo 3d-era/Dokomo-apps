@@ -6,12 +6,10 @@ const _path = _interopRequireDefault(require('path'));
 
 module.exports = Dokomo => {
   const getMessages = () => {
-    const count = Dokomo.safeParseInt(
-      document.querySelector(
-        'a[data-test-folder-name="Inbox"] span[data-test-id="displayed-count"]',
-      )?.textContent,
-    );
-    Dokomo.setBadge(count);
+    const count = document.querySelector(
+      'a[data-test-folder-name="Inbox"] span[data-test-id="displayed-count"], [data-test-id="menu-list-item"]:has([aria-label="Inbox"]) [data-test-id="badge"] > span',
+    ).textContent;
+    Ferdium.setBadge(count);
   };
 
   Dokomo.loop(getMessages);
